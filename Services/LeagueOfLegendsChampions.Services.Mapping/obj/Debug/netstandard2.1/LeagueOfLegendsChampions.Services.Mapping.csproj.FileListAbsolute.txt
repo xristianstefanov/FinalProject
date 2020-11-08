@@ -1,0 +1,8 @@
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.deps.json
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.dll
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.pdb
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.csprojAssemblyReference.cache
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.AssemblyInfo.cs
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.dll
+C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Mapping\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Mapping.pdb

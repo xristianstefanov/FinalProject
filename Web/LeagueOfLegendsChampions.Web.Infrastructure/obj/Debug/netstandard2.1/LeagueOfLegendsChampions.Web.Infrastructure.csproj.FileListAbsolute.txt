@@ -1,0 +1,7 @@
+C:\Users\xrist\Desktop\FinalProject\Web\LeagueOfLegendsChampions.Web.Infrastructure\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Web.Infrastructure.deps.json
+C:\Users\xrist\Desktop\FinalProject\Web\LeagueOfLegendsChampions.Web.Infrastructure\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Web.Infrastructure.dll
+C:\Users\xrist\Desktop\FinalProject\Web\LeagueOfLegendsChampions.Web.Infrastructure\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Web.Infrastructure.pdb
+C:\Users\xrist\Desktop\FinalProject\Web\LeagueOfLegendsChampions.Web.Infrastructure\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\xrist\Desktop\FinalProject\Web\LeagueOfLegendsChampions.Web.Infrastructure\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Web.Infrastructure.AssemblyInfo.cs
+C:\Users\xrist\Desktop\FinalProject\Web\LeagueOfLegendsChampions.Web.Infrastructure\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Web.Infrastructure.dll
+C:\Users\xrist\Desktop\FinalProject\Web\LeagueOfLegendsChampions.Web.Infrastructure\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Web.Infrastructure.pdb
