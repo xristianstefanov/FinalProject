@@ -9,3 +9,14 @@ C:\Users\xrist\Desktop\FinalProject\Data\LeagueOfLegendsChampions.Data.Models\ob
 C:\Users\xrist\Desktop\FinalProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.csproj.CopyComplete
 C:\Users\xrist\Desktop\FinalProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.dll
 C:\Users\xrist\Desktop\FinalProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.deps.json
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Common.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Common.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.csprojAssemblyReference.cache
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.AssemblyInfoInputs.cache
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.AssemblyInfo.cs
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.csproj.CopyComplete
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Data.Models.pdb

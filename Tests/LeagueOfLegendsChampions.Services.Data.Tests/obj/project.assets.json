@@ -8656,11 +8656,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\FinalProject\\Tests\\LeagueOfLegendsChampions.Services.Data.Tests\\LeagueOfLegendsChampions.Services.Data.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Tests\\LeagueOfLegendsChampions.Services.Data.Tests\\LeagueOfLegendsChampions.Services.Data.Tests.csproj",
       "projectName": "LeagueOfLegendsChampions.Services.Data.Tests",
-      "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Tests\\LeagueOfLegendsChampions.Services.Data.Tests\\LeagueOfLegendsChampions.Services.Data.Tests.csproj",
+      "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Tests\\LeagueOfLegendsChampions.Services.Data.Tests\\LeagueOfLegendsChampions.Services.Data.Tests.csproj",
       "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Tests\\LeagueOfLegendsChampions.Services.Data.Tests\\obj\\",
+      "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Tests\\LeagueOfLegendsChampions.Services.Data.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8676,11 +8676,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj"
+            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj": {
+              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj"
             },
-            "C:\\Users\\xrist\\Desktop\\FinalProject\\Services\\LeagueOfLegendsChampions.Services.Data\\LeagueOfLegendsChampions.Services.Data.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Services\\LeagueOfLegendsChampions.Services.Data\\LeagueOfLegendsChampions.Services.Data.csproj"
+            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Data\\LeagueOfLegendsChampions.Services.Data.csproj": {
+              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Data\\LeagueOfLegendsChampions.Services.Data.csproj"
             }
           }
         }

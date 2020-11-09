@@ -65,11 +65,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web.Infrastructure\\LeagueOfLegendsChampions.Web.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.Infrastructure\\LeagueOfLegendsChampions.Web.Infrastructure.csproj",
       "projectName": "LeagueOfLegendsChampions.Web.Infrastructure",
-      "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web.Infrastructure\\LeagueOfLegendsChampions.Web.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.Infrastructure\\LeagueOfLegendsChampions.Web.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",

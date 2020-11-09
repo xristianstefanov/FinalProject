@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {}
+    "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {
+    "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
+        "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
         "projectName": "LeagueOfLegendsChampions.Data.Common",
-        "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
+        "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
         "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data.Common\\obj\\",
+        "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",

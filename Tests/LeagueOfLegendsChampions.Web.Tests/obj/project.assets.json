@@ -10874,11 +10874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\FinalProject\\Tests\\LeagueOfLegendsChampions.Web.Tests\\LeagueOfLegendsChampions.Web.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Tests\\LeagueOfLegendsChampions.Web.Tests\\LeagueOfLegendsChampions.Web.Tests.csproj",
       "projectName": "LeagueOfLegendsChampions.Web.Tests",
-      "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Tests\\LeagueOfLegendsChampions.Web.Tests\\LeagueOfLegendsChampions.Web.Tests.csproj",
+      "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Tests\\LeagueOfLegendsChampions.Web.Tests\\LeagueOfLegendsChampions.Web.Tests.csproj",
       "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Tests\\LeagueOfLegendsChampions.Web.Tests\\obj\\",
+      "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Tests\\LeagueOfLegendsChampions.Web.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10894,8 +10894,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web\\LeagueOfLegendsChampions.Web.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web\\LeagueOfLegendsChampions.Web.csproj"
+            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web\\LeagueOfLegendsChampions.Web.csproj": {
+              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web\\LeagueOfLegendsChampions.Web.csproj"
             }
           }
         }

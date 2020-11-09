@@ -12,8 +12,10 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LeagueOfLegendsChampions.Data", "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data", "LeagueOfLegendsChampions.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LeagueOfLegendsChampions.Web", "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web", "LeagueOfLegendsChampions.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LeagueOfLegendsChampions.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=n" +
+    "ull", "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data", "LeagueOfLegendsChampions.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("LeagueOfLegendsChampions.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=nu" +
+    "ll", "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web", "LeagueOfLegendsChampions.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeagueOfLegendsChampions.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

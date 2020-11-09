@@ -1323,11 +1323,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj",
+      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj",
       "projectName": "LeagueOfLegendsChampions.Web.ViewModels",
-      "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj",
+      "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj",
       "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\obj\\",
+      "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1343,11 +1343,11 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj"
+            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj"
             },
-            "C:\\Users\\xrist\\Desktop\\FinalProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\FinalProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj"
+            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj"
             }
           }
         }
