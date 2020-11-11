@@ -6,3 +6,11 @@ C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.M
 C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.AssemblyInfo.cs
 C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.dll
 C:\Users\xrist\Desktop\FinalProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.deps.json
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.csprojAssemblyReference.cache
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.AssemblyInfoInputs.cache
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.AssemblyInfo.cs
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services.Messaging\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Services.Messaging.pdb

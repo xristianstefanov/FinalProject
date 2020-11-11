@@ -11,10 +11,16 @@
         public SkillsSet()
         {
             this.Id = Guid.NewGuid().ToString();
-            this.Skills = new HashSet<string>();
+            this.Skills = new HashSet<Skill>();
         }
 
-        public ICollection<string> Skills { get; set; }
+        public ICollection<Skill> Skills { get; set; }
+
+        [Required]
+
+        public string UserId { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
 
         [Required]
         [ForeignKey(nameof(Models.Champion))]

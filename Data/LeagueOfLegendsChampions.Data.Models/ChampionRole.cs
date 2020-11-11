@@ -4,13 +4,22 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using LeagueOfLegendsChampions.Data.Common.Models;
-    public enum ChampionRole
+    public class ChampionRole : BaseDeletableModel<string>
     {
-        Top = 0,
-        Jungle = 1,
-        Mid = 2,
-        Adc = 3,
-        Support = 4,
+        public ChampionRole()
+        {
+            this.Id = Guid.NewGuid().ToString();
+        }
+
+        [Required]
+        [MaxLength(10)]
+        public string RoleName { get; set; }
+
+        [Required]
+        [ForeignKey(nameof(Models.Champion))]
+        public string ChampionId { get; set; }
+        public virtual Champion Champion { get; set; }
     }
 }

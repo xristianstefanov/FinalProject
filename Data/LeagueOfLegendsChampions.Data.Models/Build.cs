@@ -15,7 +15,14 @@
         }
 
         [Required]
+        [MaxLength(80)]
         public string Name { get; set; }
+
+        [Required]
+
+        public string UserId { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
 
         public virtual ICollection<Item> Items { get; set; }
 

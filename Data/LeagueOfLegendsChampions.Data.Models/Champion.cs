@@ -22,8 +22,15 @@
         public string ImageUrl { get; set; }
 
         [Required]
+        [MaxLength(20)]
 
         public string Name { get; set; }
+
+        [Required]
+
+        public string UserId { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
 
         public virtual ICollection<ChampionRole> ChampionRoles { get; set; }
 

@@ -26,6 +26,22 @@
 
         public DbSet<Setting> Settings { get; set; }
 
+        public DbSet<Champion> Champions { get; set; }
+
+        public DbSet<ChampionRole> ChampionRoles { get; set; }
+
+        public DbSet<Build> Builds { get; set; }
+
+        public DbSet<Item> Items { get; set; }
+
+        public DbSet<Rune> Runes { get; set; }
+
+        public DbSet<RunePart> RuneParts { get; set; }
+
+        public DbSet<SkillsSet> SkillsSets { get; set; }
+
+        public DbSet<Skill> Skills { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)

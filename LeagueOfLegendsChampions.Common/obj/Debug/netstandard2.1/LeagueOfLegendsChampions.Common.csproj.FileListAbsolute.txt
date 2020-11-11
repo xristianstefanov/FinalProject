@@ -6,3 +6,11 @@ C:\Users\xrist\Desktop\FinalProject\LeagueOfLegendsChampions.Common\obj\Debug\ne
 C:\Users\xrist\Desktop\FinalProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.AssemblyInfo.cs
 C:\Users\xrist\Desktop\FinalProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.dll
 C:\Users\xrist\Desktop\FinalProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.deps.json
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\bin\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.csprojAssemblyReference.cache
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.AssemblyInfoInputs.cache
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.AssemblyInfo.cs
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\LeagueOfLegendsChampions.Common\obj\Debug\netstandard2.1\LeagueOfLegendsChampions.Common.pdb

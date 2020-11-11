@@ -14,7 +14,14 @@
         }
 
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
+
+        [Required]
+
+        public string UserId { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
 
         [Required]
         public string ImageUrl { get; set; }

@@ -16,6 +16,12 @@ namespace LeagueOfLegendsChampions.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.Champions = new HashSet<Champion>();
+            this.Builds = new HashSet<Build>();
+            this.Items = new HashSet<Item>();
+            this.Runes = new HashSet<Rune>();
+            this.RuneParts = new HashSet<RunePart>();
+            this.SkillsSets = new HashSet<SkillsSet>();
         }
 
         // Audit info
@@ -27,6 +33,13 @@ namespace LeagueOfLegendsChampions.Data.Models
         public bool IsDeleted { get; set; }
 
         public DateTime? DeletedOn { get; set; }
+
+        public virtual ICollection<Champion> Champions { get; set; }
+        public virtual ICollection<Build> Builds { get; set; }
+        public virtual ICollection<Item> Items { get; set; }
+        public virtual ICollection<Rune> Runes { get; set; }
+        public virtual ICollection<RunePart> RuneParts { get; set; }
+        public virtual ICollection<SkillsSet> SkillsSets { get; set; }
 
         public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }
 
