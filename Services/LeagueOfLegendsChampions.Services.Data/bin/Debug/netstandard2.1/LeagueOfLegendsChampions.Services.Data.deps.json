@@ -12,6 +12,7 @@
           "LeagueOfLegendsChampions.Data.Common": "1.0.0",
           "LeagueOfLegendsChampions.Data.Models": "1.0.0",
           "LeagueOfLegendsChampions.Services.Mapping": "1.0.0",
+          "LeagueOfLegendsChampions.Web.ViewModels": "1.0.0",
           "StyleCop.Analyzers": "1.2.0-beta.205"
         },
         "runtime": {
@@ -387,6 +388,15 @@
         "runtime": {
           "LeagueOfLegendsChampions.Services.Mapping.dll": {}
         }
+      },
+      "LeagueOfLegendsChampions.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "LeagueOfLegendsChampions.Data.Models": "1.0.0",
+          "LeagueOfLegendsChampions.Services.Mapping": "1.0.0"
+        },
+        "runtime": {
+          "LeagueOfLegendsChampions.Web.ViewModels.dll": {}
+        }
       }
     }
   },
@@ -652,6 +662,11 @@
       "sha512": ""
     },
     "LeagueOfLegendsChampions.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LeagueOfLegendsChampions.Web.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
