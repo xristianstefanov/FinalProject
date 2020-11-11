@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\LeagueOfLegendsChampions.Data.Common\LeagueOfLegendsChampions.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\LeagueOfLegendsChampions.Data.Models\LeagueOfLegendsChampions.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Web\LeagueOfLegendsChampions.Web.ViewModels\LeagueOfLegendsChampions.Web.ViewModels.csproj" />
     <ProjectReference Include="..\LeagueOfLegendsChampions.Services.Mapping\LeagueOfLegendsChampions.Services.Mapping.csproj" />
   </ItemGroup>
 

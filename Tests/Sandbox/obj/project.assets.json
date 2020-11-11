@@ -1711,7 +1711,8 @@
         "dependencies": {
           "LeagueOfLegendsChampions.Data.Common": "1.0.0",
           "LeagueOfLegendsChampions.Data.Models": "1.0.0",
-          "LeagueOfLegendsChampions.Services.Mapping": "1.0.0"
+          "LeagueOfLegendsChampions.Services.Mapping": "1.0.0",
+          "LeagueOfLegendsChampions.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/LeagueOfLegendsChampions.Services.Data.dll": {}
@@ -1744,6 +1745,20 @@
         },
         "runtime": {
           "bin/placeholder/LeagueOfLegendsChampions.Services.Messaging.dll": {}
+        }
+      },
+      "LeagueOfLegendsChampions.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "LeagueOfLegendsChampions.Data.Models": "1.0.0",
+          "LeagueOfLegendsChampions.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LeagueOfLegendsChampions.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LeagueOfLegendsChampions.Web.ViewModels.dll": {}
         }
       }
     }
@@ -6174,6 +6189,11 @@
       "type": "project",
       "path": "../../Services/LeagueOfLegendsChampions.Services.Messaging/LeagueOfLegendsChampions.Services.Messaging.csproj",
       "msbuildProject": "../../Services/LeagueOfLegendsChampions.Services.Messaging/LeagueOfLegendsChampions.Services.Messaging.csproj"
+    },
+    "LeagueOfLegendsChampions.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/LeagueOfLegendsChampions.Web.ViewModels/LeagueOfLegendsChampions.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/LeagueOfLegendsChampions.Web.ViewModels/LeagueOfLegendsChampions.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

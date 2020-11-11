@@ -167,6 +167,9 @@
               },
               "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {
                 "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj"
+              },
+              "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj"
               }
             }
           }
@@ -244,6 +247,73 @@
               "target": "Package",
               "version": "[10.1.1, )"
             },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj",
+        "projectName": "LeagueOfLegendsChampions.Web.ViewModels",
+        "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\LeagueOfLegendsChampions.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Web\\LeagueOfLegendsChampions.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj"
+              },
+              "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
