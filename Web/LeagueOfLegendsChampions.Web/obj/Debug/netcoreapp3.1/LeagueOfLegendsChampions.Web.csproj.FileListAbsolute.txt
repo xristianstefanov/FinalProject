@@ -910,3 +910,4 @@ C:\Users\xrist\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj
 C:\Users\xrist\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.csproj.CopyComplete
 C:\Users\xrist\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.dll
 C:\Users\xrist\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Views\Champions\Add.cshtml.g.cs
