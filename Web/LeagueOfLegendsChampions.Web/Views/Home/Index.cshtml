@@ -10,95 +10,104 @@
 @if (this.SignInManager.IsSignedIn(this.User))
 {
     <h1 class="text-center" style="color:floralwhite">Choose your champion Summoner!</h1>
-    <table style="width:100%">
+    <hr />
+
+    <div class="col-md-4 col-md-offset-6" style="margin:auto">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Champion Name" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <hr />
+
+    <table style="width:100%" cellspacing="0" cellpadding="0">
         <tr>
-            <td align="center" valign="bottom">
-                <a asp-controller="Champions" asp-action="Add">
+            <td align="center" valign="middle">
+                <a asp-controller="Champions" asp-action="ById">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Aatrox.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Aatrox
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Ahri.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Ahri
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Akali.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Akali
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Alistar.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Alistar
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Amumu.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Amumu
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Anivia.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Anivia
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Annie.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Annie
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Aphelios.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Aphelios
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Ashe.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Ashe
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/AurelionSol.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
-                    <br>Aurelion Sol
+                    <br>Aurelion
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Azir.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Azir
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Bard.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Bard
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Blitzcrank.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
                     <br>Blitzcrank
                 </a>
             </td>
-            <td align="center" valign="bottom">
+            <td align="center" valign="middle">
                 <a asp-controller="Champions" asp-action="Add">
-                    <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Brand.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
+                    <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Brand.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 87px;">
                     <br>Brand
                 </a>
             </td>
         <tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -151,7 +160,7 @@
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/DrMundo.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
-                    <br>Dr. Mundo
+                    <br>Dr.Mundo
                 </a>
             </td>
             <td align="center" valign="bottom">
@@ -185,8 +194,6 @@
                 </a>
             </td>
         <tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -273,8 +280,6 @@
                 </a>
             </td>
         <tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -285,7 +290,7 @@
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
                     <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/JarvanIV.png" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
-                    <br>Jarvan IV
+                    <br>JarvanIV
                 </a>
             </td>
             <td align="center" valign="bottom">
@@ -361,8 +366,6 @@
                 </a>
             </td>
         <tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -449,8 +452,6 @@
                 </a>
             </td>
         <tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -537,8 +538,6 @@
                 </a>
             </td>
         <tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -625,8 +624,6 @@
                 </a>
             </td>
         </tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -713,8 +710,6 @@
                 </a>
             </td>
         </tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -801,8 +796,6 @@
                 </a>
             </td>
         </tr>
-    </table>
-    <table style="width:100%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -889,8 +882,6 @@
                 </a>
             </td>
         <tr>
-    </table>
-    <table style="width:79%">
         <tr>
             <td align="center" valign="bottom">
                 <a asp-controller="Champions" asp-action="Add">
@@ -960,6 +951,9 @@
             </td>
         <tr>
     </table>
+    <hr />
+    <hr />
+    <hr />
 }
 else
 {

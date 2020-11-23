@@ -15,7 +15,6 @@
         }
 
         [HttpPost]
-
         public IActionResult Add(AddChampionInputModel input)
         {
             if (!this.ModelState.IsValid)
@@ -24,6 +23,11 @@
             }
 
             return this.Redirect("/");
+        }
+
+        public IActionResult ById()
+        {
+            return this.View();
         }
     }
 }
