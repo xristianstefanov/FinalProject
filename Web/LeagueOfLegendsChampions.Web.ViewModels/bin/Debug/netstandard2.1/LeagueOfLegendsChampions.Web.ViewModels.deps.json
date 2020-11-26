@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.1/": {
       "LeagueOfLegendsChampions.Web.ViewModels/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "LeagueOfLegendsChampions.Data.Models": "1.0.0",
           "LeagueOfLegendsChampions.Services.Mapping": "1.0.0",
           "StyleCop.Analyzers": "1.2.0-beta.205"
@@ -26,6 +27,14 @@
           "lib/netstandard2.0/AutoMapper.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.1.1.0"
+          }
+        }
+      },
+      "HtmlAgilityPack/1.11.28": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.28.0",
+            "fileVersion": "1.11.28.0"
           }
         }
       },
@@ -364,6 +373,7 @@
       },
       "LeagueOfLegendsChampions.Data.Common/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
@@ -372,6 +382,7 @@
       },
       "LeagueOfLegendsChampions.Data.Models/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "LeagueOfLegendsChampions.Data.Common": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9"
         },
@@ -381,7 +392,8 @@
       },
       "LeagueOfLegendsChampions.Services.Mapping/1.0.0": {
         "dependencies": {
-          "AutoMapper": "10.1.1"
+          "AutoMapper": "10.1.1",
+          "HtmlAgilityPack": "1.11.28"
         },
         "runtime": {
           "LeagueOfLegendsChampions.Services.Mapping.dll": {}
@@ -401,6 +413,13 @@
       "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.28": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aclp8f2p+xeNNR02qfMu2r4K49sNWE13VDHiLpv9SoKBDIwwy62HQIMnT+oeuyFquQRzwSGD3vUWUmtOT+eNzQ==",
+      "path": "htmlagilitypack/1.11.28",
+      "hashPath": "htmlagilitypack.1.11.28.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
       "type": "package",

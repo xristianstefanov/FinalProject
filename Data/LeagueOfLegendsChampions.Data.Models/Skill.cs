@@ -13,12 +13,7 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
-        [Required]
-        [MaxLength(50)]
         public string Name { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(Models.SkillsSet))]
         public string SkillsSetId { get; set; }
         public virtual SkillsSet SkillsSet { get; set; }
     }

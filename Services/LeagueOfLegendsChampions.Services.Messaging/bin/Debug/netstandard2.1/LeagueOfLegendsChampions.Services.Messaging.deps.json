@@ -9,11 +9,20 @@
     ".NETStandard,Version=v2.1/": {
       "LeagueOfLegendsChampions.Services.Messaging/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "SendGrid": "9.21.0",
           "StyleCop.Analyzers": "1.2.0-beta.205"
         },
         "runtime": {
           "LeagueOfLegendsChampions.Services.Messaging.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.11.28": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.28.0",
+            "fileVersion": "1.11.28.0"
+          }
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -490,6 +499,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "HtmlAgilityPack/1.11.28": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aclp8f2p+xeNNR02qfMu2r4K49sNWE13VDHiLpv9SoKBDIwwy62HQIMnT+oeuyFquQRzwSGD3vUWUmtOT+eNzQ==",
+      "path": "htmlagilitypack/1.11.28",
+      "hashPath": "htmlagilitypack.1.11.28.nupkg.sha512"
     },
     "Microsoft.CSharp/4.0.1": {
       "type": "package",

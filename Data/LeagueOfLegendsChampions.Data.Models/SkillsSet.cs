@@ -16,14 +16,9 @@
 
         public ICollection<Skill> Skills { get; set; }
 
-        [Required]
-
         public string UserId { get; set; }
 
         public virtual ApplicationUser User { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(Models.Champion))]
         public string ChampionId { get; set; }
         public virtual Champion Champion { get; set; }
     }

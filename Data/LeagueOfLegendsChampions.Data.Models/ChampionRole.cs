@@ -13,12 +13,7 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
-        [Required]
-        [MaxLength(10)]
         public string RoleName { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(Models.Champion))]
         public string ChampionId { get; set; }
         public virtual Champion Champion { get; set; }
     }

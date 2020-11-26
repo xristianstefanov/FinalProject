@@ -25,6 +25,7 @@
       "LeagueOfLegendsChampions.Web/1.0.0": {
         "dependencies": {
           "BuildBundlerMinifier": "3.2.449",
+          "HtmlAgilityPack": "1.11.28",
           "LeagueOfLegendsChampions.Common": "1.0.0",
           "LeagueOfLegendsChampions.Data": "1.0.0",
           "LeagueOfLegendsChampions.Data.Models": "1.0.0",
@@ -322,6 +323,17 @@
         }
       },
       "BuildBundlerMinifier/3.2.449": {},
+      "HtmlAgilityPack/1.11.28": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.28.0",
+            "fileVersion": "1.11.28.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -2519,6 +2531,9 @@
         }
       },
       "LeagueOfLegendsChampions.Common/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack": "1.11.28"
+        },
         "runtime": {
           "LeagueOfLegendsChampions.Common.dll": {}
         },
@@ -2528,6 +2543,7 @@
       },
       "LeagueOfLegendsChampions.Data/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "LeagueOfLegendsChampions.Common": "1.0.0",
           "LeagueOfLegendsChampions.Data.Common": "1.0.0",
           "LeagueOfLegendsChampions.Data.Models": "1.0.0",
@@ -2544,6 +2560,7 @@
       },
       "LeagueOfLegendsChampions.Data.Common/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
@@ -2555,6 +2572,7 @@
       },
       "LeagueOfLegendsChampions.Data.Models/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "LeagueOfLegendsChampions.Data.Common": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9"
         },
@@ -2566,6 +2584,9 @@
         }
       },
       "LeagueOfLegendsChampions.Services/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack": "1.11.28"
+        },
         "runtime": {
           "LeagueOfLegendsChampions.Services.dll": {}
         },
@@ -2575,6 +2596,7 @@
       },
       "LeagueOfLegendsChampions.Services.Data/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "LeagueOfLegendsChampions.Data.Common": "1.0.0",
           "LeagueOfLegendsChampions.Data.Models": "1.0.0",
           "LeagueOfLegendsChampions.Services.Mapping": "1.0.0",
@@ -2589,7 +2611,8 @@
       },
       "LeagueOfLegendsChampions.Services.Mapping/1.0.0": {
         "dependencies": {
-          "AutoMapper": "10.1.1"
+          "AutoMapper": "10.1.1",
+          "HtmlAgilityPack": "1.11.28"
         },
         "runtime": {
           "LeagueOfLegendsChampions.Services.Mapping.dll": {}
@@ -2600,6 +2623,7 @@
       },
       "LeagueOfLegendsChampions.Services.Messaging/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "SendGrid": "9.21.0"
         },
         "runtime": {
@@ -2610,6 +2634,9 @@
         }
       },
       "LeagueOfLegendsChampions.Web.Infrastructure/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack": "1.11.28"
+        },
         "runtime": {
           "LeagueOfLegendsChampions.Web.Infrastructure.dll": {}
         },
@@ -2619,6 +2646,7 @@
       },
       "LeagueOfLegendsChampions.Web.ViewModels/1.0.0": {
         "dependencies": {
+          "HtmlAgilityPack": "1.11.28",
           "LeagueOfLegendsChampions.Data.Models": "1.0.0",
           "LeagueOfLegendsChampions.Services.Mapping": "1.0.0"
         },
@@ -4192,6 +4220,13 @@
       "sha512": "sha512-uA9sYDy4VepL3xwzBTLcP2LyuVYMt0ZIT3gaSiXvGoX15Ob+rOP+hGydhevlSVd+rFo+Y+VQFEHDuWU8HBW+XA==",
       "path": "buildbundlerminifier/3.2.449",
       "hashPath": "buildbundlerminifier.3.2.449.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.28": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aclp8f2p+xeNNR02qfMu2r4K49sNWE13VDHiLpv9SoKBDIwwy62HQIMnT+oeuyFquQRzwSGD3vUWUmtOT+eNzQ==",
+      "path": "htmlagilitypack/1.11.28",
+      "hashPath": "htmlagilitypack.1.11.28.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
       "type": "package",

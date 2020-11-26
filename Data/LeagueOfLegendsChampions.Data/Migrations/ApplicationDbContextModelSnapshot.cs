@@ -145,7 +145,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ChampionId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -161,12 +160,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -191,8 +187,10 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
+                    b.Property<string>("ImageFullSizeUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageIconUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -202,12 +200,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -225,7 +220,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ChampionId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -241,9 +235,7 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RoleName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -260,7 +252,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BuildId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -270,7 +261,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -280,12 +270,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -305,7 +292,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ChampionId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -321,12 +307,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -352,7 +335,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -362,16 +344,12 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RuneId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -435,12 +413,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SkillsSetId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -458,7 +433,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ChampionId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -474,7 +448,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -596,102 +569,76 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
                         .WithMany("Builds")
-                        .HasForeignKey("ChampionId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("ChampionId");
 
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
                         .WithMany("Builds")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Champion", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
                         .WithMany("Champions")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.ChampionRole", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
                         .WithMany("ChampionRoles")
-                        .HasForeignKey("ChampionId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("ChampionId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Item", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Build", "Build")
                         .WithMany("Items")
-                        .HasForeignKey("BuildId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("BuildId");
 
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
                         .WithMany("Items")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Rune", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
                         .WithMany("Runes")
-                        .HasForeignKey("ChampionId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("ChampionId");
 
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
                         .WithMany("Runes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.RunePart", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Rune", "Rune")
                         .WithMany("RuneParts")
-                        .HasForeignKey("RuneId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("RuneId");
 
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
                         .WithMany("RuneParts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Skill", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.SkillsSet", "SkillsSet")
                         .WithMany("Skills")
-                        .HasForeignKey("SkillsSetId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("SkillsSetId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.SkillsSet", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
                         .WithMany("SkillsSets")
-                        .HasForeignKey("ChampionId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("ChampionId");
 
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
                         .WithMany("SkillsSets")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
