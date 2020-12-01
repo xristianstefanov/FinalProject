@@ -3,6 +3,6 @@
     using System.Threading.Tasks;
     public interface IChampionScraperService
     {
-        //void ImportChampionssAsync();
+        Task ImportChampionsNamesAndIconsAsync();
     }
 }

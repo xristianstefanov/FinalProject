@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {}
+    "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {
+    "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj",
+        "projectUniqueName": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj",
         "projectName": "LeagueOfLegendsChampions.Services.Mapping",
-        "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj",
+        "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\LeagueOfLegendsChampions.Services.Mapping.csproj",
         "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\obj\\",
+        "outputPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Services\\LeagueOfLegendsChampions.Services.Mapping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",

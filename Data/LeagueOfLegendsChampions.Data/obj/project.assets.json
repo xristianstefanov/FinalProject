@@ -6216,11 +6216,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj",
+      "projectUniqueName": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj",
       "projectName": "LeagueOfLegendsChampions.Data",
-      "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj",
+      "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\LeagueOfLegendsChampions.Data.csproj",
       "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\obj\\",
+      "outputPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6236,14 +6236,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj"
+            "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {
+              "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj"
             },
-            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj"
+            "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj"
             },
-            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\LeagueOfLegendsChampions.Common\\LeagueOfLegendsChampions.Common.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\LeagueOfLegendsChampions.Common\\LeagueOfLegendsChampions.Common.csproj"
+            "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\LeagueOfLegendsChampions.Common\\LeagueOfLegendsChampions.Common.csproj": {
+              "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\LeagueOfLegendsChampions.Common\\LeagueOfLegendsChampions.Common.csproj"
             }
           }
         }

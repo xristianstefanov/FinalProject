@@ -1,13 +1,14 @@
-﻿@{
+﻿@model LeagueOfLegendsChampions.Web.ViewModels.Champions.ChampionInListViewModel;
+@{
     ViewData["Title"] = "ById";
 }
 
 <hr />
 <div class="card mb-3">
-    <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg" alt="Card image cap" style="border: solid 2px #ffffff">
+    <img class="card-img-top" src="@this.Model.ImageFullSizeUrl" alt="Card image cap" style="border: solid 2px #ffffff">
     <div class="card-body">
-        <h3 class="card-title text-center">Aatrox</h3>
-        <p class="card-text text-center">The Darkin Blade</p>
+        <h3 class="card-title text-center">@this.Model.Name</h3>
+        <p class="card-text text-center">@this.Model.Nickname.ToUpper()</p>
     </div>
 </div>
 <hr />

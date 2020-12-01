@@ -83,3 +83,12 @@ C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\obj\Debug\netcoreapp3.
 C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.AssemblyInfoInputs.cache
 C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.AssemblyInfo.cs
 C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.csproj.CopyComplete
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\bin\Debug\netcoreapp3.1\Sandbox.deps.json
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\bin\Debug\netcoreapp3.1\Sandbox.runtimeconfig.json
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\bin\Debug\netcoreapp3.1\Sandbox.runtimeconfig.dev.json
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\bin\Debug\netcoreapp3.1\Sandbox.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\bin\Debug\netcoreapp3.1\Sandbox.pdb
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.dll
+C:\Users\xrist\Desktop\MyFirstAspNetProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.pdb

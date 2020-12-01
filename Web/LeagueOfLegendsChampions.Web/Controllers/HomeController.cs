@@ -1,16 +1,29 @@
 ﻿namespace LeagueOfLegendsChampions.Web.Controllers
 {
     using System.Diagnostics;
-
+    using System.Linq;
+    using LeagueOfLegendsChampions.Data.Common.Repositories;
+    using LeagueOfLegendsChampions.Data.Models;
+    using LeagueOfLegendsChampions.Services.Data;
     using LeagueOfLegendsChampions.Web.ViewModels;
-
+    using LeagueOfLegendsChampions.Web.ViewModels.Champions;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController
     {
+        private readonly IChampionsService championsService;
+        public HomeController(IChampionsService championsService)
+        {
+            this.championsService = championsService;
+        }
+
         public IActionResult Index()
         {
-            return this.View();
+            var viewModel = new ChampionsListViewModel
+            {
+                Champions = this.championsService.GetAll<ChampionInListViewModel>(),
+            };
+            return this.View(viewModel);
         }
 
         public IActionResult Privacy()

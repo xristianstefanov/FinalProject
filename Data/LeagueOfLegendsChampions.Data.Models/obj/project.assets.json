@@ -1175,11 +1175,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj",
+      "projectUniqueName": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj",
       "projectName": "LeagueOfLegendsChampions.Data.Models",
-      "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj",
+      "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\LeagueOfLegendsChampions.Data.Models.csproj",
       "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\obj\\",
+      "outputPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1195,8 +1195,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {
-              "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj"
+            "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj": {
+              "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj"
             }
           }
         }

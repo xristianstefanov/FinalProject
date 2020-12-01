@@ -222,11 +222,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
+      "projectUniqueName": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
       "projectName": "LeagueOfLegendsChampions.Data.Common",
-      "projectPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
+      "projectPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\LeagueOfLegendsChampions.Data.Common.csproj",
       "packagesPath": "C:\\Users\\xrist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xrist\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\obj\\",
+      "outputPath": "C:\\Users\\xrist\\OneDrive\\Desktop\\MyFirstAspNetProject\\Data\\LeagueOfLegendsChampions.Data.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xrist\\AppData\\Roaming\\NuGet\\NuGet.Config",
