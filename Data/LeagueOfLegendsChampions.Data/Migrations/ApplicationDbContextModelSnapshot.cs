@@ -176,6 +176,26 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.ToTable("Builds");
                 });
 
+            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.BuildItem", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("BuildId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ItemId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BuildId");
+
+                    b.HasIndex("ItemId");
+
+                    b.ToTable("BuildItems");
+                });
+
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Champion", b =>
                 {
                     b.Property<string>("Id")
@@ -254,7 +274,7 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("BuildId")
+                    b.Property<string>("ApplicationUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -275,16 +295,11 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("BuildId");
+                    b.HasIndex("ApplicationUserId");
 
                     b.HasIndex("IsDeleted");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Items");
                 });
@@ -579,6 +594,17 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasForeignKey("UserId");
                 });
 
+            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.BuildItem", b =>
+                {
+                    b.HasOne("LeagueOfLegendsChampions.Data.Models.Build", "Build")
+                        .WithMany("Items")
+                        .HasForeignKey("BuildId");
+
+                    b.HasOne("LeagueOfLegendsChampions.Data.Models.Item", "Item")
+                        .WithMany("Builds")
+                        .HasForeignKey("ItemId");
+                });
+
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Champion", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
@@ -595,13 +621,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Item", b =>
                 {
-                    b.HasOne("LeagueOfLegendsChampions.Data.Models.Build", "Build")
+                    b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", null)
                         .WithMany("Items")
-                        .HasForeignKey("BuildId");
-
-                    b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
-                        .WithMany("Items")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("ApplicationUserId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Rune", b =>

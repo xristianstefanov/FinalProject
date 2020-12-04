@@ -1382,8 +1382,7 @@ C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampion
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.csproj.CopyComplete
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.dll
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.pdb
-C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\bin\Debug\netcoreapp3.1\Korzh.EasyQuery.dll
-C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\bin\Debug\netcoreapp3.1\Korzh.EasyQuery.Db.dll
-C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\bin\Debug\netcoreapp3.1\Korzh.EasyQuery.Linq.dll
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Views\Builds\All.cshtml.g.cs
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Views\Builds\Create.cshtml.g.cs

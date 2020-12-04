@@ -34,6 +34,8 @@
 
         public DbSet<Item> Items { get; set; }
 
+        public DbSet<BuildItem> BuildItems { get; set; }
+
         public DbSet<Rune> Runes { get; set; }
 
         public DbSet<RunePart> RuneParts { get; set; }
