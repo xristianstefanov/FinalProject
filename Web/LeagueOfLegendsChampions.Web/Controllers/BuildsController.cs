@@ -18,10 +18,10 @@
             {
                 Builds = this.buildsService.GetAll<BuildInListViewModel>(id),
             };
-            return this.View();
+            return this.View(viewModel);
         }
 
-        public IActionResult Create()
+        public IActionResult Create() //Primeren view model s 6 itema
         {
             return this.View();
         }

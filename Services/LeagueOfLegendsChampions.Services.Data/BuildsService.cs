@@ -18,6 +18,7 @@
         public IEnumerable<T> GetAll<T>(string id)
         {
             var builds = this.buildsRepository.AllAsNoTracking()
+                .Where(b => b.ChampionId == id)
                 .To<T>()
                 .ToList();
 
