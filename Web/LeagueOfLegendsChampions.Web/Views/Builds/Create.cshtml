@@ -1,7 +1,149 @@
-﻿@{
-    ViewData["Title"] = "Create";
+﻿@model LeagueOfLegendsChampions.Web.ViewModels.Builds.BuildInListViewModel;
+@{
+    ViewData["Title"] = "Create your build:";
 }
 
-<h1 style="color:floralwhite">1st item</h1>
-<h1 style="color:floralwhite">2nd item</h1>
+<head>
+    <style>
+        hr {
+            border: none;
+            border-top: 3px ridge floralwhite;
+            color: floralwhite;
+            overflow: visible;
+            text-align: center;
+            height: 5px;
+        }
+
+        h2 {
+            color: floralwhite;
+            text-align: center;
+        }
+
+        h1 {
+            color: floralwhite;
+            font-style: initial;
+        }
+
+        label {
+            color: floralwhite;
+        }
+
+        .dropbtn {
+            background-color: floralwhite;
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 84px;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            padding: 5px 15px;
+            background-color: floralwhite;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            width: 180px;
+        }
+
+        /*.dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }*/
+
+        /*.dropdown-content a:hover {
+                    background-color: floralwhite
+                }*/
+
+        .dropdown:hover .dropdown-content {
+            display: inline-block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: floralwhite;
+        }
+
+
+        .dropdown-content li {
+            list-style-type: none;
+            cursor: pointer;
+        }
+
+            .dropdown-content li img {
+                width: 24px;
+                display: inline-block;
+            }
+
+            .dropdown-content li p {
+                display: inline-block;
+            }
+    </style>
+</head>
+<body>
+
+    <form method="post" class="col-md-6 offset-md-3">
+        <h2>@this.ViewData["Title"]</h2>
+        <hr>
+        <div asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <hr>
+            @*@foreach (var selectedItem in this.Model.SelectedItems)
+                {
+                    <div>
+                        <span style="color:floralwhite">Item @selectedItem</span>
+                        <select id="items" name="Item">
+                            @foreach (var item in this.Model.Items)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                }*@
+            @{int counter = 0; }
+            @foreach (var selectedItem in this.Model.SelectedItems)
+            {
+                <div class="dropdown">
+                    <div class="dropbtn" id="mainButton_@counter">Item @selectedItem</div>
+                    <ul id="items-@selectedItem" name="Item-@selectedItem" class="dropdown-content">
+                        @foreach (var item in this.Model.Items)
+                        {
+                            <li class="dropdown-content-item" onclick="clickItemHandler(@item.Id, @counter)">
+                                <p id="itemNameId_@item.Id">@item.Name</p>
+                                <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Aatrox.png" />
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                counter++;
+            }
+            <hr>
+        </div>
+        <input type="submit" class="btn btn-outline-white" />
+    </form>
+
+    <script>
+        function clickItemHandler(itemId, mainButtonId) {
+            var newText = document.getElementById('itemNameId_' + itemId).innerHTML
+            document.getElementById('mainButton_' + mainButtonId).innerHTML = newText
+        }
+    </script>
+</body>
+
 

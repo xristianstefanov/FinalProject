@@ -10,5 +10,6 @@
         public string Id { get; set; }
         public string Name { get; set; }
         public IEnumerable<ItemInBuildViewModel> Items { get; set; }
+        public IEnumerable<string> SelectedItems { get; set; }
     }
 }

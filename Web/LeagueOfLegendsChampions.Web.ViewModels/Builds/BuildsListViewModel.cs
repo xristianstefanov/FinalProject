@@ -4,6 +4,7 @@
 
     public class BuildsListViewModel
     {
+        public string ChampionName { get; set; }
         public IEnumerable<BuildInListViewModel> Builds { get; set; }
     }
 }

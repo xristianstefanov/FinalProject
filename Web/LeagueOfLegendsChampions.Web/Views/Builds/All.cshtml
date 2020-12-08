@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <h2 style="color:floralwhite;text-align:center">ChampionName Builds:</h2>
+    <h2 style="color:floralwhite;text-align:center">@this.Model.ChampionName Builds:</h2>
 
     <hr>
 
@@ -24,12 +24,8 @@
     {
         @foreach (var item in build.Items)
         {
-            <img src="http://ddragon.leagueoflegends.com/cdn/10.20.1/img/champion/Aatrox.png" class="mr-3" style="width: 75px;">
+            <img src="@item.ImageUrl" class="mr-3" style="width: 75px;">
         }
-        <hr>
-
-        <h1 style="color:floralwhite">All Builds</h1>
-
         <hr>
     }
 
