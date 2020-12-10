@@ -418,11 +418,23 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("ChampionId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("FifthLevelToUpgrade")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FirstLevelToUpgrade")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FourthLevelToUpgrade")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -433,40 +445,14 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SkillsSetId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("SecondLevelToUpgrade")
+                        .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<string>("SkillImageUrl")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("IsDeleted");
-
-                    b.HasIndex("SkillsSetId");
-
-                    b.ToTable("Skills");
-                });
-
-            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.SkillsSet", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ChampionId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ThirdLevelToUpgrade")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -474,9 +460,7 @@ namespace LeagueOfLegendsChampions.Data.Migrations
 
                     b.HasIndex("IsDeleted");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("SkillsSets");
+                    b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -650,20 +634,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Skill", b =>
                 {
-                    b.HasOne("LeagueOfLegendsChampions.Data.Models.SkillsSet", "SkillsSet")
-                        .WithMany("Skills")
-                        .HasForeignKey("SkillsSetId");
-                });
-
-            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.SkillsSet", b =>
-                {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
-                        .WithMany("SkillsSets")
+                        .WithMany("Skills")
                         .HasForeignKey("ChampionId");
-
-                    b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", "User")
-                        .WithMany("SkillsSets")
-                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

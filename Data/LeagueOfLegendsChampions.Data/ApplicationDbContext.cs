@@ -40,8 +40,6 @@
 
         public DbSet<RunePart> RuneParts { get; set; }
 
-        public DbSet<SkillsSet> SkillsSets { get; set; }
-
         public DbSet<Skill> Skills { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);

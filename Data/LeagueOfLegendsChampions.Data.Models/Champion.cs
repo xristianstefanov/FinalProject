@@ -14,7 +14,7 @@
             this.ChampionRoles = new HashSet<ChampionRole>();
             this.Builds = new HashSet<Build>();
             this.Runes = new HashSet<Rune>();
-            this.SkillsSets = new HashSet<SkillsSet>();
+            this.Skills = new HashSet<Skill>();
         }
 
         public string ImageIconUrl { get; set; }
@@ -35,7 +35,7 @@
 
         public virtual ICollection<Rune> Runes { get; set; }
 
-        public virtual ICollection<SkillsSet> SkillsSets { get; set; }
+        public virtual ICollection<Skill> Skills { get; set; }
 
     }
 }

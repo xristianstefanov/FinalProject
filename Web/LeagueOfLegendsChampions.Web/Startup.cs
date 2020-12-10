@@ -67,6 +67,7 @@
             services.AddTransient<IChampionScraperService, ChampionScraperService>();
             services.AddTransient<IChampionsService, ChampionsService>();
             services.AddTransient<IBuildsService, BuildsService>();
+            services.AddTransient<ISkillsService, SkillsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

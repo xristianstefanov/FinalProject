@@ -21,7 +21,6 @@ namespace LeagueOfLegendsChampions.Data.Models
             this.Items = new HashSet<Item>();
             this.Runes = new HashSet<Rune>();
             this.RuneParts = new HashSet<RunePart>();
-            this.SkillsSets = new HashSet<SkillsSet>();
         }
 
         // Audit info
@@ -39,7 +38,6 @@ namespace LeagueOfLegendsChampions.Data.Models
         public virtual ICollection<Item> Items { get; set; }
         public virtual ICollection<Rune> Runes { get; set; }
         public virtual ICollection<RunePart> RuneParts { get; set; }
-        public virtual ICollection<SkillsSet> SkillsSets { get; set; }
 
         public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }
 

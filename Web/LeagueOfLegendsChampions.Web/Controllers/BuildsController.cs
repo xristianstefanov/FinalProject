@@ -1,12 +1,13 @@
-﻿using LeagueOfLegendsChampions.Services.Data;
-using LeagueOfLegendsChampions.Web.ViewModels.Builds;
-using LeagueOfLegendsChampions.Web.ViewModels.Champions;
-using LeagueOfLegendsChampions.Web.ViewModels.Items;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-
-namespace LeagueOfLegendsChampions.Web.Controllers
+﻿namespace LeagueOfLegendsChampions.Web.Controllers
 {
+    using System.Collections.Generic;
+
+    using LeagueOfLegendsChampions.Services.Data;
+    using LeagueOfLegendsChampions.Web.ViewModels.Builds;
+    using LeagueOfLegendsChampions.Web.ViewModels.Champions;
+    using LeagueOfLegendsChampions.Web.ViewModels.Items;
+    using Microsoft.AspNetCore.Mvc;
+
     public class BuildsController : Controller
     {
         private readonly IBuildsService buildsService;

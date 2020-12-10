@@ -1386,3 +1386,4 @@ C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampion
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\LeagueOfLegendsChampions.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Views\Builds\All.cshtml.g.cs
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Views\Builds\Create.cshtml.g.cs
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Views\Skills\All.cshtml.g.cs

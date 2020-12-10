@@ -1,0 +1,157 @@
+﻿@model LeagueOfLegendsChampions.Web.ViewModels.Skills.SkillsForSingleChampViewModel;
+@{
+    ViewData["Title"] = "All";
+}
+
+
+<head>
+    <style>
+
+        h2 {
+            color: floralwhite;
+            text-align: center;
+        }
+
+        p1 {
+            color: floralwhite;
+            font-size: medium;
+        }
+
+        p5 {
+            background-color: darkslategrey;
+            width: 10px;
+            padding: 8px;
+            border: 2px solid floralwhite;
+            margin: 10px;
+            text-align: center;
+            font-style: normal;
+            color: floralwhite;
+        }
+
+        .myP {
+            color: floralwhite;
+            text-align: center;
+            font-style: normal;
+            font-size: larger;
+            margin-bottom: 5px;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px ridge floralwhite;
+            color: floralwhite;
+            overflow: visible;
+            text-align: center;
+            height: 5px;
+        }
+
+        .myClass {
+            border-style: solid;
+            border-color: floralwhite;
+            border-width: thin;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Most Frequent Skill Order for @this.Model.ChampionName:</h2>
+    <hr>
+    @{int counter = 0;}
+
+    @foreach (var skill in this.Model.Skills)
+    {
+        if (counter == 0)
+        {
+            <div class="myP">
+                <p3>@this.Model.ChampionName's Q:</p3>
+            </div>
+        }
+        else if (counter == 1)
+        {
+            <div class="myP">
+                <p3>@this.Model.ChampionName's W:</p3>
+            </div>
+        }
+        else if (counter == 2)
+        {
+            <div class="myP">
+                <p3>@this.Model.ChampionName's E:</p3>
+            </div>
+        }
+        else if (counter == 3)
+        {
+            <div class="myP">
+                <p3>@this.Model.ChampionName's R:</p3>
+            </div>
+        }
+        else
+        {
+            <div class="myP">
+                <p3>@this.Model.ChampionName's Passive:</p3>
+            </div>
+        }
+        <div class="myClass">
+            <img src="@skill.SkillImageUrl" style="width: 64px">
+            <p1>@skill.Name |</p1>
+            @if (skill.FirstLevelToUpgrade > 0)
+            {
+                @if (counter == 3 && this.Model.ChampionName == "Ryze")
+                {
+                    <p5>6 Lvl.</p5>
+                    <img src="~/img/ClipartKey_1996783.png" style="width: 65px">
+                }
+                else
+                {
+                    <p5>@skill.FirstLevelToUpgrade Lvl.</p5>
+                    <img src="~/img/ClipartKey_1996783.png" style="width: 65px">
+                }
+            }
+            @if (skill.SecondLevelToUpgrade > 0)
+            {
+                @if (counter == 3 && this.Model.ChampionName == "Ryze")
+                {
+                    <p5>11 Lvl.</p5>
+                    <img src="~/img/ClipartKey_1996783.png" style="width: 65px">
+                }
+                else
+                {
+                    <p5>@skill.SecondLevelToUpgrade Lvl.</p5>
+                    <img src="~/img/ClipartKey_1996783.png" style="width: 65px">
+                }
+            }
+            @if (skill.ThirdLevelToUpgrade > 0)
+            {
+                @if (counter == 3 && this.Model.ChampionName == "Ryze")
+                {
+                    <p5>12 Lvl.</p5>
+                }
+                else
+                {
+                    @if (counter == 3)
+                    {
+                        <p5>@skill.ThirdLevelToUpgrade Lvl.</p5>
+                    }
+                    else
+                    {
+                        <p5>@skill.ThirdLevelToUpgrade Lvl.</p5>
+                        <img src="~/img/ClipartKey_1996783.png" style="width: 65px">
+                    }
+                }
+            }
+            @if (skill.FourthLevelToUpgrade > 0)
+            {
+                <p5>@skill.FourthLevelToUpgrade Lvl.</p5>
+                <img src="~/img/ClipartKey_1996783.png" style="width: 65px">
+            }
+            @if (skill.FifthLevelToUpgrade > 0)
+            {
+                <p5>@skill.FifthLevelToUpgrade Lvl.</p5>
+            }
+        </div>
+        counter++;
+    }
+
+</body>
+
