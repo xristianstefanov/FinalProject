@@ -11,7 +11,7 @@
         public Champion()
         {
             this.Id = Guid.NewGuid().ToString();
-            this.ChampionRoles = new HashSet<ChampionRole>();
+            this.Skins = new HashSet<Skin>();
             this.Builds = new HashSet<Build>();
             this.Runes = new HashSet<Rune>();
             this.Skills = new HashSet<Skill>();
@@ -25,17 +25,18 @@
 
         public string Name { get; set; }
 
+        public string Lore { get; set; }
+
         public string UserId { get; set; }
 
         public virtual ApplicationUser User { get; set; }
 
-        public virtual ICollection<ChampionRole> ChampionRoles { get; set; }
+        public virtual ICollection<Skin> Skins { get; set; }
 
         public virtual ICollection<Build> Builds { get; set; }
 
         public virtual ICollection<Rune> Runes { get; set; }
 
         public virtual ICollection<Skill> Skills { get; set; }
-
     }
 }

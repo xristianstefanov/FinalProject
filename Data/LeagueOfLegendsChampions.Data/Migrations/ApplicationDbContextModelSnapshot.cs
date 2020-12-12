@@ -216,6 +216,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Lore")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
@@ -235,38 +238,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Champions");
-                });
-
-            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.ChampionRole", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ChampionId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("RoleName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ChampionId");
-
-                    b.HasIndex("IsDeleted");
-
-                    b.ToTable("ChampionRoles");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Item", b =>
@@ -463,6 +434,41 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.ToTable("Skills");
                 });
 
+            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Skins", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ChampionId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SkinImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SkinName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChampionId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Skins");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -596,13 +602,6 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                         .HasForeignKey("UserId");
                 });
 
-            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.ChampionRole", b =>
-                {
-                    b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
-                        .WithMany("ChampionRoles")
-                        .HasForeignKey("ChampionId");
-                });
-
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Item", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", null)
@@ -636,6 +635,13 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
                         .WithMany("Skills")
+                        .HasForeignKey("ChampionId");
+                });
+
+            modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Skins", b =>
+                {
+                    b.HasOne("LeagueOfLegendsChampions.Data.Models.Champion", "Champion")
+                        .WithMany("Skins")
                         .HasForeignKey("ChampionId");
                 });
 

@@ -147,7 +147,14 @@
             }
             @if (skill.FifthLevelToUpgrade > 0)
             {
-                <p5>@skill.FifthLevelToUpgrade Lvl.</p5>
+                @if (counter == 2 && this.Model.ChampionName == "Seraphine")
+                {
+                    <p5>18 Lvl.</p5>
+                }
+                else
+                {
+                    <p5>@skill.FifthLevelToUpgrade Lvl.</p5>
+                }
             }
         </div>
         counter++;

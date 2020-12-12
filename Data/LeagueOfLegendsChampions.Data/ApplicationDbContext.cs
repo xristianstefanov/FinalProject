@@ -28,7 +28,7 @@
 
         public DbSet<Champion> Champions { get; set; }
 
-        public DbSet<ChampionRole> ChampionRoles { get; set; }
+        public DbSet<Skin> Skins { get; set; }
 
         public DbSet<Build> Builds { get; set; }
 

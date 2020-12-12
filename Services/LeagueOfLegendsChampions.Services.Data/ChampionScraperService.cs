@@ -13,111 +13,113 @@
         private readonly IDeletableEntityRepository<Champion> championsRepository;
         private readonly IDeletableEntityRepository<Item> itemsRepository;
         private readonly IDeletableEntityRepository<Skill> skillsRepository;
-        public ChampionScraperService(IDeletableEntityRepository<Champion> championsRepository, IDeletableEntityRepository<Item> itemsRepository, IDeletableEntityRepository<Skill> skillsRepository)
+        private readonly IDeletableEntityRepository<Skin> skinsRepository;
+        public ChampionScraperService(IDeletableEntityRepository<Champion> championsRepository, IDeletableEntityRepository<Item> itemsRepository, IDeletableEntityRepository<Skill> skillsRepository, IDeletableEntityRepository<Skin> skinsRepository)
         {
             this.championsRepository = championsRepository;
             this.itemsRepository = itemsRepository;
             this.skillsRepository = skillsRepository;
+            this.skinsRepository = skinsRepository;
         }
 
         public async Task ImportChampionsNamesAndIconsAsync()
         {
-            //HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();
-            //HtmlAgilityPack.HtmlDocument doc1 = web.Load("https://champion.gg/");
-            //int count = 0;
+            HtmlAgilityPack.HtmlWeb webForChampions = new HtmlAgilityPack.HtmlWeb();
+            HtmlAgilityPack.HtmlDocument docForChampions = webForChampions.Load("https://champion.gg/");
+            int countForChampions = 0;
 
-            //foreach (var item in doc1.DocumentNode.SelectNodes("//div[@class='tsm-tooltip']"))
-            //{
-            //    if (count > 19)
-            //    {
-            //        string url = item.InnerHtml.Trim().Replace(" ", string.Empty);
-            //        int indexOfUrlFirst = url.IndexOf("('");
-            //        int indexOfUrlSecond = url.IndexOf("')");
-            //        string championIconImageUrl = url.Substring(indexOfUrlFirst, indexOfUrlSecond - indexOfUrlFirst).Replace("('", string.Empty);
-            //        string championName = Regex.Replace(item.InnerText, @"\t|\n|\r", string.Empty);
-            //        string championNameFull = championName.Replace("&#39;", "'").Trim().ToString().Replace("&amp;", "&");
+            foreach (var currentChampion in docForChampions.DocumentNode.SelectNodes("//div[@class='tsm-tooltip']"))
+            {
+                if (countForChampions > 19)
+                {
+                    string url = currentChampion.InnerHtml.Trim().Replace(" ", string.Empty);
+                    int indexOfUrlFirst = url.IndexOf("('");
+                    int indexOfUrlSecond = url.IndexOf("')");
+                    string championIconImageUrl = url.Substring(indexOfUrlFirst, indexOfUrlSecond - indexOfUrlFirst).Replace("('", string.Empty);
+                    string championName = Regex.Replace(currentChampion.InnerText, @"\t|\n|\r", string.Empty);
+                    string championNameFull = championName.Replace("&#39;", "'").Trim().ToString().Replace("&amp;", "&");
 
-            //        HtmlAgilityPack.HtmlWeb web1 = new HtmlAgilityPack.HtmlWeb();
-            //        string myUsedLink = string.Empty;
+                    HtmlAgilityPack.HtmlWeb webForChampionsNicknames = new HtmlAgilityPack.HtmlWeb();
+                    string myUsedLink = string.Empty;
 
-            //        if (championNameFull == "Nunu & Willump")
-            //        {
-            //            myUsedLink = $"https://na.leagueoflegends.com/en-us/champions/Name/".Replace("Name", "nunu");
-            //        }
-            //        else
-            //        {
-            //            myUsedLink = $"https://na.leagueoflegends.com/en-us/champions/Name/".Replace("Name", $"{championNameFull.Replace(".", string.Empty).ToLower().Replace("'", "-").ToString().Replace(" ", "-").ToString()}");
-            //        }
+                    if (championNameFull == "Nunu & Willump")
+                    {
+                        myUsedLink = $"https://na.leagueoflegends.com/en-us/champions/Name/".Replace("Name", "nunu");
+                    }
+                    else
+                    {
+                        myUsedLink = $"https://na.leagueoflegends.com/en-us/champions/Name/".Replace("Name", $"{championNameFull.Replace(".", string.Empty).ToLower().Replace("'", "-").ToString().Replace(" ", "-").ToString()}");
+                    }
 
-            //        HtmlAgilityPack.HtmlDocument doc2 = web1.Load(myUsedLink);
+                    HtmlAgilityPack.HtmlDocument docForChampionsNicknames = webForChampionsNicknames.Load(myUsedLink);
 
-            //        string championFullSizeImageUrl = string.Empty;
-            //        foreach (var item1 in doc2.DocumentNode.SelectNodes("//div[@class='style__ForegroundAsset-sc-1o884zt-4 cVdVkh']"))
-            //        {
-            //            string urlOne = item1.InnerHtml.Trim().Replace(" ", string.Empty);
-            //            int indexOfUrlFirstOne = urlOne.IndexOf("=\"");
-            //            int indexOfUrlSecondOne = urlOne.IndexOf("g\"");
-            //            championFullSizeImageUrl = urlOne.Substring(indexOfUrlFirstOne + 1, indexOfUrlSecondOne - indexOfUrlFirstOne).Replace("\"", string.Empty);
-            //        }
+                    string championFullSizeImageUrl = string.Empty;
+                    foreach (var itemUsedForChampPage in docForChampionsNicknames.DocumentNode.SelectNodes("//div[@class='style__ForegroundAsset-sc-1o884zt-4 cVdVkh']"))
+                    {
+                        string urlOne = itemUsedForChampPage.InnerHtml.Trim().Replace(" ", string.Empty);
+                        int indexOfUrlFirstOne = urlOne.IndexOf("=\"");
+                        int indexOfUrlSecondOne = urlOne.IndexOf("g\"");
+                        championFullSizeImageUrl = urlOne.Substring(indexOfUrlFirstOne + 1, indexOfUrlSecondOne - indexOfUrlFirstOne).Replace("\"", string.Empty);
+                    }
 
-            //        string nicknameForChamp = string.Empty;
-            //        foreach (var item2 in doc2.DocumentNode.SelectNodes("//span[@class='style__Intro-sc-14gxj1e-2 fmCNnE']"))
-            //        {
-            //            nicknameForChamp = item2.InnerText.Replace("&#x27;", "'");
-            //        }
+                    string nicknameForChamp = string.Empty;
+                    foreach (var itemForNicknames in docForChampionsNicknames.DocumentNode.SelectNodes("//span[@class='style__Intro-sc-14gxj1e-2 fmCNnE']"))
+                    {
+                        nicknameForChamp = itemForNicknames.InnerText.Replace("&#x27;", "'");
+                    }
 
-            //        var championToAdd = new Champion
-            //        {
-            //            Name = championNameFull,
-            //            ImageIconUrl = championIconImageUrl,
-            //            ImageFullSizeUrl = championFullSizeImageUrl,
-            //            Nickname = nicknameForChamp,
-            //        };
+                    var championToAdd = new Champion
+                    {
+                        Name = championNameFull,
+                        ImageIconUrl = championIconImageUrl,
+                        ImageFullSizeUrl = championFullSizeImageUrl,
+                        Nickname = nicknameForChamp,
+                    };
 
-            //        await this.championsRepository.AddAsync(championToAdd);
-            //        count++;
-            //    }
-            //    else
-            //    {
-            //        count++;
-            //    }
-            //}
+                    await this.championsRepository.AddAsync(championToAdd);
+                    countForChampions++;
+                }
+                else
+                {
+                    countForChampions++;
+                }
+            }
 
-            //await this.championsRepository.SaveChangesAsync();
+            await this.championsRepository.SaveChangesAsync();
 
-            //HtmlAgilityPack.HtmlWeb web10 = new HtmlAgilityPack.HtmlWeb();
-            //HtmlAgilityPack.HtmlDocument doc10 = web10.Load("https://rankedboost.com/league-of-legends/items-update-2020/");
-            //int count1 = 0;
+            HtmlAgilityPack.HtmlWeb webForItems = new HtmlAgilityPack.HtmlWeb();
+            HtmlAgilityPack.HtmlDocument docForItems = webForItems.Load("https://rankedboost.com/league-of-legends/items-update-2020/");
+            int countForItems = 0;
 
-            //foreach (var item10 in doc10.DocumentNode.SelectNodes("//a[@class='sim-champ-a']"))
-            //{
-            //    if (count1 > 171)
-            //    {
-            //        break;
-            //    }
+            foreach (var currentItem in docForItems.DocumentNode.SelectNodes("//a[@class='sim-champ-a']"))
+            {
+                if (countForItems > 171)
+                {
+                    break;
+                }
 
-            //    string textForNames = item10.InnerHtml.Trim();
-            //    int indexOfTextForNamesFirst = textForNames.IndexOf("title=");
-            //    int indexOfTextForNamesSecond = textForNames.IndexOf("class");
-            //    string namesOfItems = textForNames.Substring(indexOfTextForNamesFirst, indexOfTextForNamesSecond - indexOfTextForNamesFirst);
-            //    string name = namesOfItems.Replace("title=", string.Empty).ToString().Replace("\"", string.Empty).Trim();
-            //    string urlForImages = item10.InnerHtml;
-            //    int indexOfUrlForImagesFirst = urlForImages.IndexOf("data-lazy-src=");
-            //    int indexOfUrlForImagesSecond = urlForImages.IndexOf(".png");
-            //    string imageUrlForItems = urlForImages.Substring(indexOfUrlForImagesFirst, indexOfUrlForImagesSecond + 4 - indexOfUrlForImagesFirst);
-            //    string finalUrl = imageUrlForItems.Replace("data-lazy-src=\"", string.Empty).Trim();
+                string textForItems = currentItem.InnerHtml.Trim();
+                int startingIndexOfTextForItems = textForItems.IndexOf("title=");
+                int indexOfTextForItems = textForItems.IndexOf("class");
+                string namesOfItems = textForItems.Substring(startingIndexOfTextForItems, indexOfTextForItems - startingIndexOfTextForItems);
+                string name = namesOfItems.Replace("title=", string.Empty).ToString().Replace("\"", string.Empty).Trim();
+                string urlForImages = currentItem.InnerHtml;
+                int indexOfUrlForImagesFirst = urlForImages.IndexOf("data-lazy-src=");
+                int indexOfUrlForImagesSecond = urlForImages.IndexOf(".png");
+                string imageUrlForItems = urlForImages.Substring(indexOfUrlForImagesFirst, indexOfUrlForImagesSecond + 4 - indexOfUrlForImagesFirst);
+                string finalUrl = imageUrlForItems.Replace("data-lazy-src=\"", string.Empty).Trim();
 
-            //    var itemToAdd = new Item
-            //    {
-            //        Name = name,
-            //        ImageUrl = finalUrl,
-            //    };
+                var itemToAdd = new Item
+                {
+                    Name = name,
+                    ImageUrl = finalUrl,
+                };
 
-            //    await this.itemsRepository.AddAsync(itemToAdd);
-            //    count1++;
-            //}
+                await this.itemsRepository.AddAsync(itemToAdd);
+                countForItems++;
+            }
 
-            //await this.itemsRepository.SaveChangesAsync();
+            await this.itemsRepository.SaveChangesAsync();
 
             foreach (var champion in this.championsRepository.AllAsNoTracking().OrderBy(c => c.Name))
             {
@@ -150,12 +152,12 @@
                 }
                 else
                 {
-                    HtmlAgilityPack.HtmlWeb web11 = new HtmlAgilityPack.HtmlWeb();
-                    HtmlAgilityPack.HtmlDocument doc11 = web11.Load("https://rankedboost.com/league-of-legends/build/Name/".Replace("Name", champNameToUseForSkillLevels));
+                    HtmlAgilityPack.HtmlWeb webForSkillLevels = new HtmlAgilityPack.HtmlWeb();
+                    HtmlAgilityPack.HtmlDocument docForSkillLevels = webForSkillLevels.Load("https://rankedboost.com/league-of-legends/build/Name/".Replace("Name", champNameToUseForSkillLevels));
 
                     int counterForLevels = 1;
 
-                    foreach (var skillLevel in doc11.DocumentNode.SelectNodes("//td[@class='rb-build-skill-seq-td']"))
+                    foreach (var skillLevel in docForSkillLevels.DocumentNode.SelectNodes("//td[@class='rb-build-skill-seq-td']"))
                     {
                         if (skillLevel.InnerText == "Q")
                         {
@@ -180,7 +182,6 @@
                     }
                 }
 
-
                 string champNameToUseForSkill = string.Empty;
 
                 if (champion.Name == "Nunu & Willump")
@@ -192,11 +193,11 @@
                     champNameToUseForSkill = champion.Name.Replace(".", string.Empty).ToLower().Replace("'", string.Empty).ToString().Replace(" ", string.Empty).ToString();
                 }
 
-                HtmlAgilityPack.HtmlWeb web10 = new HtmlAgilityPack.HtmlWeb();
-                HtmlAgilityPack.HtmlDocument doc10 = web10.Load("https://u.gg/lol/champions/Name/build".Replace("Name", champNameToUseForSkill));
+                HtmlAgilityPack.HtmlWeb webForSkills = new HtmlAgilityPack.HtmlWeb();
+                HtmlAgilityPack.HtmlDocument docForSkills = webForSkills.Load("https://u.gg/lol/champions/Name/build".Replace("Name", champNameToUseForSkill));
                 int countToUseForSkills = 0;
 
-                foreach (var item10 in doc10.DocumentNode.SelectNodes("//div[@class='skill-order-row']"))
+                foreach (var item10 in docForSkills.DocumentNode.SelectNodes("//div[@class='skill-order-row']"))
                 {
                     string text = item10.InnerHtml;
                     string textForNames = item10.InnerText;
@@ -240,19 +241,38 @@
                     }
                     else if (countToUseForSkills == 2)
                     {
-                        var skillToAdd = new Skill
+                        if (eLevels.Count > 4)
                         {
-                            ChampionId = champion.Id,
-                            Name = skillName.Replace("&#x;", "'"),
-                            SkillImageUrl = skillImageUrl,
-                            FirstLevelToUpgrade = eLevels[0],
-                            SecondLevelToUpgrade = eLevels[1],
-                            ThirdLevelToUpgrade = eLevels[2],
-                            FourthLevelToUpgrade = eLevels[3],
-                            FifthLevelToUpgrade = eLevels[4],
-                        };
+                            var skillToAdd = new Skill
+                            {
+                                ChampionId = champion.Id,
+                                Name = skillName.Replace("&#x;", "'"),
+                                SkillImageUrl = skillImageUrl,
+                                FirstLevelToUpgrade = eLevels[0],
+                                SecondLevelToUpgrade = eLevels[1],
+                                ThirdLevelToUpgrade = eLevels[2],
+                                FourthLevelToUpgrade = eLevels[3],
+                                FifthLevelToUpgrade = eLevels[4],
+                            };
 
-                        await this.skillsRepository.AddAsync(skillToAdd);
+                            await this.skillsRepository.AddAsync(skillToAdd);
+                        }
+                        else
+                        {
+                            var skillToAdd = new Skill
+                            {
+                                ChampionId = champion.Id,
+                                Name = skillName.Replace("&#x;", "'"),
+                                SkillImageUrl = skillImageUrl,
+                                FirstLevelToUpgrade = eLevels[0],
+                                SecondLevelToUpgrade = eLevels[1],
+                                ThirdLevelToUpgrade = eLevels[2],
+                                FourthLevelToUpgrade = eLevels[3],
+                                FifthLevelToUpgrade = 26,
+                            };
+
+                            await this.skillsRepository.AddAsync(skillToAdd);
+                        }
                     }
                     else if (countToUseForSkills == 3)
                     {
@@ -279,8 +299,8 @@
                                 ChampionId = champion.Id,
                                 Name = skillName.Replace("&#x;", "'"),
                                 SkillImageUrl = skillImageUrl,
-                                FirstLevelToUpgrade = 25,
-                                SecondLevelToUpgrade = 25,
+                                FirstLevelToUpgrade = rLevels[0],
+                                SecondLevelToUpgrade = rLevels[1],
                                 ThirdLevelToUpgrade = 25,
                                 FourthLevelToUpgrade = 0,
                                 FifthLevelToUpgrade = 0,
@@ -313,6 +333,53 @@
             }
 
             await this.skillsRepository.SaveChangesAsync();
+
+            foreach (var neededChampForSkins in this.championsRepository.AllAsNoTracking())
+            {
+                HtmlAgilityPack.HtmlWeb webForSkins = new HtmlAgilityPack.HtmlWeb();
+
+                string myUsedLinkForSkins = string.Empty;
+                if (neededChampForSkins.Name == "Nunu & Willump")
+                {
+                    myUsedLinkForSkins = $"https://na.leagueoflegends.com/en-us/champions/Name/".Replace("Name", "nunu");
+                }
+                else
+                {
+                    myUsedLinkForSkins = $"https://na.leagueoflegends.com/en-us/champions/Name/".Replace("Name", $"{neededChampForSkins.Name.Replace(".", string.Empty).ToLower().Replace("'", "-").ToString().Replace(" ", "-").ToString()}");
+                }
+
+                HtmlAgilityPack.HtmlDocument docForSkins = webForSkins.Load(myUsedLinkForSkins);
+                var textForSkinsList = docForSkins.DocumentNode.SelectNodes("//div[@class='style__CarouselItemThumb-sc-1tlyqoa-15 csknpA']");
+                var textForSkinsNames = docForSkins.DocumentNode.SelectNodes("//label[@class='style__CarouselItemText-sc-1tlyqoa-16 oOgWZ']");
+
+                for (int i = 0; i < textForSkinsList.Count; i++)
+                {
+                    string skinText = textForSkinsList[i].InnerHtml;
+                    int indexOfTextForSkin = skinText.IndexOf("src=\"");
+                    int indexOfTextForSkinSecond = skinText.IndexOf(".jpg");
+                    string skinImgUrls = skinText.Substring(indexOfTextForSkin + 4, indexOfTextForSkinSecond - indexOfTextForSkin).Replace("\"", string.Empty);
+
+                    string skinName = string.Empty;
+                    for (int t = 0; t < textForSkinsNames.Count; t++)
+                    {
+                        if (i == t)
+                        {
+                            skinName = textForSkinsNames[t].InnerText;
+                        }
+                    }
+
+                    var skinToAdd = new Skin
+                    {
+                        ChampionId = neededChampForSkins.Id,
+                        SkinName = skinName,
+                        SkinImageUrl = skinImgUrls,
+                    };
+
+                    await this.skinsRepository.AddAsync(skinToAdd);
+                }
+            }
+
+            await this.skinsRepository.SaveChangesAsync();
         }
     }
 }
