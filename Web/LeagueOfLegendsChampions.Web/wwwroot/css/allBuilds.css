@@ -1,0 +1,17 @@
+﻿hr {
+    border: none;
+    border-top: 3px ridge floralwhite;
+    color: floralwhite;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+h2 {
+    color: floralwhite;
+    text-align: center;
+}
+
+.mr-3 {
+    width: 75px;
+}

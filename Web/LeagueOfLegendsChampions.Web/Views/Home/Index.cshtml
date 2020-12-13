@@ -8,94 +8,16 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-@if (this.SignInManager.IsSignedIn(this.User))
-{
-    <h1 class="text-center" style="color:floralwhite">Choose your champion Summoner!</h1>
-    <hr />
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/loggedHomePage.css">
+</head>
+<body>
+    @if (this.SignInManager.IsSignedIn(this.User))
+    {
+        <h1>Choose your champion Summoner!</h1>
 
-    @*<div class="col-md-4 col-md-offset-6" style="margin:auto">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Champion Name" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>*@
-
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            .dropbtn {
-                background-color: floralwhite;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: double;
-                cursor: pointer;
-                margin-left: 459px;
-                width: 244px;
-            }
-
-            .row{
-                border: solid;
-                border-color: floralwhite;
-                padding: 40px;
-            }
-
-            .col-md-14{
-                padding: 10px;
-            }
-
-                .dropbtn:hover, .dropbtn:focus {
-                    background-color: floralwhite;
-                }
-
-            #myInput {
-                box-sizing: border-box;
-                background-image: url('searchicon.png');
-                background-position: 14px 12px;
-                background-repeat: no-repeat;
-                font-size: 16px;
-                padding: 12px 20px 12px 45px;
-                border: none;
-                border-bottom: 1px solid #ddd;
-            }
-
-                #myInput:focus {
-                    outline: 3px solid #ddd;
-                }
-
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f6f6f6;
-                min-width: 230px;
-                overflow: auto;
-                border: 1px solid #ddd;
-                z-index: 1;
-                margin-left: 459px;
-            }
-
-                .dropdown-content a {
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                }
-
-            .dropdown a:hover {
-                background-color: #ddd;
-            }
-
-            .show {
-                display: block;
-            }
-        </style>
-    </head>
-    <body>
+        <hr />
 
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn" style="color:black">Find Champion</button>
@@ -108,88 +30,66 @@
             </div>
         </div>
 
-        <script>
-            /* When the user clicks on the button,
-            toggle between hiding and showing the dropdown content */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
+        <hr />
+
+        <div class="row">
+            @foreach (var champion in this.Model.Champions)
+            {
+                <div class="col-md-14">
+                    <a asp-controller="Champions" asp-action="ById" asp-route-id="@champion.Id">
+                        <img src="@champion.ImageIconUrl" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
+                        @if (champion.Name == "Nunu & Willump")
+                        {
+                            <p class="text-center">Nunu</p>
+                        }
+                        else if (champion.Name == "Miss Fortune")
+                        {
+                            <p class="text-center">Miss F</p>
+                        }
+                        else if (champion.Name == "Mordekaiser")
+                        {
+                            <p class="text-center">Morde</p>
+                        }
+                        else if (champion.Name == "Aurelion Sol")
+                        {
+                            <p class="text-center">Aurelion S</p>
+                        }
+                        else if (champion.Name == "Fiddlesticks")
+                        {
+                            <p class="text-center">Fiddle</p>
+                        }
+                        else if (champion.Name == "Twisted Fate")
+                        {
+                            <p class="text-center">Twisted F</p>
+                        }
+                        else if (champion.Name == "Tryndamere")
+                        {
+                            <p class="text-center">Trynd</p>
+                        }
+                        else
+                        {
+                            <p class="text-center">@champion.Name</p>
+                        }
+                    </a>
+                </div>
             }
+        </div>
+        <hr />
+        <hr />
+        <hr />
+    }
+    else
+    {
+        <div class="text-centerForWelcome">
+            <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
+        </div>
+        <div class="myButtonOne">
+            <a button class="btn btn-light btn-lg" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </div>
+        <div class="myButtonTwo">
+            <a button class="btn btn-light btn-lg" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </div>
+    }
 
-            function filterFunction() {
-                var input, filter, ul, li, a, i;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
-                div = document.getElementById("myDropdown");
-                a = div.getElementsByTagName("a");
-                for (i = 0; i < a.length; i++) {
-                    txtValue = a[i].textContent || a[i].innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        a[i].style.display = "";
-                    } else {
-                        a[i].style.display = "none";
-                    }
-                }
-            }
-        </script>
-
-    </body>
-
-    <hr />
-    <div class="row">
-        @foreach (var champion in this.Model.Champions)
-        {
-            <div class="col-md-14">
-                <a asp-controller="Champions" asp-action="ById" asp-route-id="@champion.Id">
-                    <img src="@champion.ImageIconUrl" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 75px;">
-                    @if (champion.Name == "Nunu & Willump")
-                    {
-                        <p class="text-center">Nunu</p>
-                    }
-                    else if (champion.Name == "Miss Fortune")
-                    {
-                        <p class="text-center">Miss F</p>
-                    }
-                    else if (champion.Name == "Mordekaiser")
-                    {
-                        <p class="text-center">Morde</p>
-                    }
-                    else if (champion.Name == "Aurelion Sol")
-                    {
-                        <p class="text-center">Aurelion S</p>
-                    }
-                    else if (champion.Name == "Fiddlesticks")
-                    {
-                        <p class="text-center">Fiddle</p>
-                    }
-                    else if (champion.Name == "Twisted Fate")
-                    {
-                        <p class="text-center">Twisted F</p>
-                    }
-                    else if (champion.Name == "Tryndamere")
-                    {
-                        <p class="text-center">Trynd</p>
-                    }
-                    else
-                    {
-                        <p class="text-center">@champion.Name</p>
-                    }
-                </a>
-            </div>
-        }
-    </div>
-    <hr />
-    <hr />
-    <hr />
-}
-else
-{
-    <div class="text-center" style="position:absolute;top:250px">
-        <h1 class="display-4" style="color:floralwhite">Welcome to @GlobalConstants.SystemName!</h1>
-    </div>
-    <div>
-        <a button class="btn btn-light btn-lg" style="position:absolute;bottom: 300px;left: 600px" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </div>
-    <div>
-        <a button class="btn btn-light btn-lg" style="position:absolute;bottom: 300px;right: 600px" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </div>
-}
+    <script src="~/js/loggedHomePage.js" asp-append-version="true"></script>
+</body>

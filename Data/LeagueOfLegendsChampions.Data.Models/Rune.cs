@@ -13,6 +13,7 @@
             this.Id = Guid.NewGuid().ToString();
             this.RuneParts = new HashSet<RunePart>();
         }
+
         public string Name { get; set; }
         public string UserId { get; set; }
 

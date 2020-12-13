@@ -1,0 +1,45 @@
+﻿h2 {
+    color: floralwhite;
+    text-align: center;
+}
+
+p1 {
+    color: floralwhite;
+    font-size: medium;
+}
+
+p5 {
+    background-color: darkslategrey;
+    width: 10px;
+    padding: 8px;
+    border: 2px solid floralwhite;
+    margin: 10px;
+    text-align: center;
+    font-style: normal;
+    color: floralwhite;
+}
+
+.myP {
+    color: floralwhite;
+    text-align: center;
+    font-style: normal;
+    font-size: larger;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+hr {
+    border: none;
+    border-top: 3px ridge floralwhite;
+    color: floralwhite;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+.myClass {
+    border-style: solid;
+    border-color: floralwhite;
+    border-width: thin;
+}
