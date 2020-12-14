@@ -14,12 +14,14 @@
         private readonly IDeletableEntityRepository<Item> itemsRepository;
         private readonly IDeletableEntityRepository<Skill> skillsRepository;
         private readonly IDeletableEntityRepository<Skin> skinsRepository;
-        public ChampionScraperService(IDeletableEntityRepository<Champion> championsRepository, IDeletableEntityRepository<Item> itemsRepository, IDeletableEntityRepository<Skill> skillsRepository, IDeletableEntityRepository<Skin> skinsRepository)
+        private readonly IDeletableEntityRepository<Rune> runesRepository;
+        public ChampionScraperService(IDeletableEntityRepository<Champion> championsRepository, IDeletableEntityRepository<Item> itemsRepository, IDeletableEntityRepository<Skill> skillsRepository, IDeletableEntityRepository<Skin> skinsRepository, IDeletableEntityRepository<Rune> runesRepository)
         {
             this.championsRepository = championsRepository;
             this.itemsRepository = itemsRepository;
             this.skillsRepository = skillsRepository;
             this.skinsRepository = skinsRepository;
+            this.runesRepository = runesRepository;
         }
 
         public async Task ImportChampionsNamesAndIconsAsync()
@@ -77,6 +79,7 @@
                     };
 
                     await this.championsRepository.AddAsync(championToAdd);
+
                     countForChampions++;
                 }
                 else
@@ -380,6 +383,47 @@
             }
 
             await this.skinsRepository.SaveChangesAsync();
+
+            foreach (var championWithRunes in this.championsRepository.AllAsNoTracking().OrderBy(c => c.Name))
+            {
+                string champNameToUseForRunes = string.Empty;
+
+                if (championWithRunes.Name == "Nunu & Willump")
+                {
+                    champNameToUseForRunes = "nunu";
+                }
+                else if (championWithRunes.Name == "Kai'Sa")
+                {
+                    champNameToUseForRunes = "kaisa";
+                }
+                else
+                {
+                    champNameToUseForRunes = championWithRunes.Name.Replace(".", string.Empty).ToLower().Replace("'", "-").ToString().Replace(" ", "-").ToString();
+                }
+
+                HtmlAgilityPack.HtmlWeb webForRunes = new HtmlAgilityPack.HtmlWeb();
+                HtmlAgilityPack.HtmlDocument docForRunes = webForRunes.Load("https://rankedboost.com/league-of-legends/build/Name/".Replace("Name", champNameToUseForRunes));
+
+                foreach (var rune in docForRunes.DocumentNode.SelectNodes("//div[@class='rb-build-runes-keystone-slot']"))
+                {
+                    string textForRune = rune.InnerHtml;
+                    int indexOfTextForRunesFirst = textForRune.IndexOf("-src=");
+                    int indexOfTextForRunesSecond = textForRune.IndexOf(".png");
+                    string runeImageUrl = textForRune.Substring(indexOfTextForRunesFirst + 5, indexOfTextForRunesSecond - indexOfTextForRunesFirst).Replace("\"", string.Empty);
+                    string runeName = rune.InnerText;
+
+                    var runeToAdd = new Rune
+                    {
+                        ChampionId = championWithRunes.Id,
+                        Name = runeName,
+                        RuneImgUrl = runeImageUrl,
+                    };
+
+                    await this.runesRepository.AddAsync(runeToAdd);
+                }
+            }
+
+            await this.runesRepository.SaveChangesAsync();
         }
     }
 }

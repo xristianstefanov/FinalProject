@@ -1,0 +1,133 @@
+﻿@model LeagueOfLegendsChampions.Web.ViewModels.Runes.RuneForSingleChampViewModel
+@{
+    ViewData["Title"] = "All";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/allRunes.css">
+</header>
+<body>
+    <h1>@this.Model.ChampionName's Best Runes:</h1>
+    <hr>
+
+    @{int counter = 0;}
+    <table>
+        <tr class="myR">
+            <th>Primary</th>
+            <th>Secondary</th>
+            <th>Third</th>
+        </tr>
+        <tr>
+            @foreach (var rune in this.Model.Runes)
+            {
+                @if (counter == 0)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p6>@rune.Name</p6>
+                    </td>
+                }
+                else if (counter == 5)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p6>@rune.Name</p6>
+                    </td>
+                }
+                else if (counter == 8)
+                {
+                    <td>
+                        <img class="littleRune" src="@rune.RuneImgUrl">
+                        <p6>@rune.Name</p6>
+                    </td>
+                }
+                counter++;
+            }
+        </tr>
+        @{counter = 0;}
+        <tr>
+            @foreach (var rune in this.Model.Runes)
+            {
+                @if (counter == 1)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                else if (counter == 6)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                else if (counter == 9)
+                {
+                    <td>
+                        <img class="littleRune" src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                counter++;
+            }
+        </tr>
+        @{counter = 0;}
+        <tr>
+            @foreach (var rune in this.Model.Runes)
+            {
+                @if (counter == 2)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                else if (counter == 7)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                else if (counter == 10)
+                {
+                    <td>
+                        <img class="littleRune" src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                counter++;
+            }
+        </tr>
+        @{counter = 0;}
+        <tr>
+            @foreach (var rune in this.Model.Runes)
+            {
+                @if (counter == 3)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                counter++;
+            }
+        </tr>
+        @{counter = 0;}
+        <tr>
+            @foreach (var rune in this.Model.Runes)
+            {
+                @if (counter == 4)
+                {
+                    <td>
+                        <img src="@rune.RuneImgUrl">
+                        <p5>@rune.Name</p5>
+                    </td>
+                }
+                counter++;
+            }
+        </tr>
+    </table>
+    <hr>
+</body>

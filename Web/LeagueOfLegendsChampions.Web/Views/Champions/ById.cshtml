@@ -11,8 +11,11 @@
         <p class="card-text text-center">@this.Model.Nickname.ToUpper()</p>
     </div>
 </div>
+<hr>
+<h1 style="color: floralwhite;text-align:center;text-decoration: underline;text-underline-position: under;">"Welcome to Summoner's Rift!"</h1>
+<hr>
 <a class="btn btn-outline-white btn-lg btn-block" asp-controller="Builds" asp-action="All" asp-route-id="@this.Model.Id">Builds</a>
-<a type="button" class="btn btn-outline-white btn-lg btn-block" asp-controller="Champions" asp-action="Add">Runes</a>
+<a class="btn btn-outline-white btn-lg btn-block" asp-controller="Runes" asp-action="All" asp-route-id="@this.Model.Id">Runes</a>
 <a class="btn btn-outline-white btn-lg btn-block" asp-controller="Skills" asp-action="All" asp-route-id="@this.Model.Id">Skills</a>
 <a class="btn btn-outline-white btn-lg btn-block" asp-controller="Skins" asp-action="All" asp-route-id="@this.Model.Id">Skins</a>
 <hr />

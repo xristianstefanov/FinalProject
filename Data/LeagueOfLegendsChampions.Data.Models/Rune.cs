@@ -11,14 +11,11 @@
         public Rune()
         {
             this.Id = Guid.NewGuid().ToString();
-            this.RuneParts = new HashSet<RunePart>();
         }
 
         public string Name { get; set; }
-        public string UserId { get; set; }
+        public string RuneImgUrl { get; set; }
 
-        public virtual ApplicationUser User { get; set; }
-        public ICollection<RunePart> RuneParts { get; set; }
         public string ChampionId { get; set; }
         public virtual Champion Champion { get; set; }
     }
