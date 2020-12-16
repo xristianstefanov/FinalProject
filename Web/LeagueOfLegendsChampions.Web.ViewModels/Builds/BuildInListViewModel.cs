@@ -1,6 +1,8 @@
 ﻿namespace LeagueOfLegendsChampions.Web.ViewModels.Builds
 {
     using System.Collections.Generic;
+    using System.Linq;
+    using AutoMapper;
     using LeagueOfLegendsChampions.Data.Models;
     using LeagueOfLegendsChampions.Services.Mapping;
     using LeagueOfLegendsChampions.Web.ViewModels.Items;

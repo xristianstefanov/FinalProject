@@ -33,6 +33,7 @@
         public DbSet<Build> Builds { get; set; }
 
         public DbSet<Item> Items { get; set; }
+
         public DbSet<BuildItem> BuildItems { get; set; }
 
         public DbSet<Rune> Runes { get; set; }
