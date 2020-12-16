@@ -44,13 +44,7 @@
         <input type="submit" class="btn btn-outline-white btn-lg btn-block" />
     </form>
 
-    <script>
-        function clickItemHandler(itemId, mainButtonId) {
-            var newText = document.getElementById('itemNameId_' + itemId).innerHTML
-            document.getElementById('mainButton_' + mainButtonId).value = newText
-            document.getElementById('mainButtonLabel_' + mainButtonId).innerHTML = newText
-        }
-    </script>
+    <script src="~/js/creatingBuild.js" asp-append-version="true"></script>
 </body>
 
 

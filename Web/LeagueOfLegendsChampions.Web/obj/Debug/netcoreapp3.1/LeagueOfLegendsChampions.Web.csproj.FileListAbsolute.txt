@@ -1424,3 +1424,4 @@ C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampion
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Views\Champions\Details.cshtml.g.cs
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Views\Champions\Edit.cshtml.g.cs
 C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Administration\Views\Champions\Index.cshtml.g.cs
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Web\LeagueOfLegendsChampions.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs

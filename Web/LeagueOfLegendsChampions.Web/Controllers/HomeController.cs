@@ -7,6 +7,7 @@
     using LeagueOfLegendsChampions.Services.Data;
     using LeagueOfLegendsChampions.Web.ViewModels;
     using LeagueOfLegendsChampions.Web.ViewModels.Champions;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController
@@ -24,6 +25,12 @@
                 Champions = this.championsService.GetAll<ChampionInListViewModel>(),
             };
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult Chat()
+        {
+            return this.View();
         }
 
         public IActionResult Privacy()
