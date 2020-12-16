@@ -1,21 +1,33 @@
 ﻿namespace LeagueOfLegendsChampions.Web.Controllers
 {
     using System.Collections.Generic;
-
+    using System.Linq;
+    using System.Threading.Tasks;
+    using LeagueOfLegendsChampions.Data.Common.Repositories;
+    using LeagueOfLegendsChampions.Data.Models;
     using LeagueOfLegendsChampions.Services.Data;
     using LeagueOfLegendsChampions.Web.ViewModels.Builds;
     using LeagueOfLegendsChampions.Web.ViewModels.Champions;
     using LeagueOfLegendsChampions.Web.ViewModels.Items;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     public class BuildsController : Controller
     {
         private readonly IBuildsService buildsService;
         private readonly IChampionsService championsService;
-        public BuildsController(IBuildsService buildsService, IChampionsService championsService)
+        private readonly IItemsService itemsService;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly IDeletableEntityRepository<Item> itemsRepository;
+        private readonly IRepository<BuildItem> buildItemsRepository;
+        public BuildsController(IBuildsService buildsService, IChampionsService championsService, IItemsService itemsService, UserManager<ApplicationUser> userManager, IDeletableEntityRepository<Item> itemsRepository, IRepository<BuildItem> buildItemsRepository)
         {
             this.buildsService = buildsService;
             this.championsService = championsService;
+            this.itemsService = itemsService;
+            this.userManager = userManager;
+            this.itemsRepository = itemsRepository;
+            this.buildItemsRepository = buildItemsRepository;
         }
 
         public IActionResult All(string id)
@@ -24,41 +36,38 @@
 
             var viewModel = new BuildsListViewModel
             {
+                Id = id,
                 ChampionName = currentChampion.Name,
                 Builds = this.buildsService.GetAll<BuildInListViewModel>(id),
             };
+
             return this.View(viewModel);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            var viewModel = new BuildInListViewModel
+            List<Item> listOfItemsToUse = this.itemsRepository.AllAsNoTracking().ToList();
+            var viewModel = new BuildInListViewModel();
+            viewModel.Items = listOfItemsToUse;
+            viewModel.SelectedItems = new List<string> { "1", "2", "3", "4", "5", "6" };
+            int count = 0;
+            foreach (var item in viewModel.Items)
             {
-                Id = "1",
-                Name = "Neshto1",
-                Items = new List<ItemInBuildViewModel>
-                {
-                    new ItemInBuildViewModel {Id = "1", Name = "NqkakuvItem1"},
-                    new ItemInBuildViewModel {Id = "2", Name = "NqkakuvItem2"},
-                    new ItemInBuildViewModel {Id = "3", Name = "NqkakuvItem3"},
-                    new ItemInBuildViewModel {Id = "4", Name = "NqkakuvItem4"},
-                    new ItemInBuildViewModel {Id = "5", Name = "NqkakuvItem5"},
-                    new ItemInBuildViewModel {Id = "6", Name = "NqkakuvItem6"},
-                    new ItemInBuildViewModel {Id = "7", Name = "NqkakuvItem7"},
-                },
-                SelectedItems = new List<string> { "1", "2", "3", "4", "5", "6"},
-            };
+                item.Id = $"{count + 1}";
+                count++;
+            }
 
             return this.View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Create(BuildInListViewModel input)
+        public async Task<IActionResult> CreateAsync(BuildInListViewModel input, string id)
         {
-            // tuk dovavqme nov build kum bazata s propertitata vkarani ot input i sled tova ne vrushtame view a redirect kum All builds
-            return this.View();
+            var user = await this.userManager.GetUserAsync(this.User);
+            input.User = user;
+            await this.buildsService.CreateAsync(input, id);
+            return this.Redirect($"/Champions/ById/{id}");
         }
-
     }
 }

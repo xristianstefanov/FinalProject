@@ -3,22 +3,26 @@
     ViewData["Title"] = "All";
 }
 
-<head>
-    <link rel="stylesheet" href="~/css/allBuilds.css">
-</head>
+<header>
+    <link rel="stylesheet" href="~/css/allBuildsForCurrentChamp.css">
+</header>
 <body>
     <h2>@this.Model.ChampionName Builds:</h2>
 
     <hr>
-
     @foreach (var build in this.Model.Builds)
     {
-        @foreach (var item in build.Items)
-        {
-            <img src="@item.ImageUrl" class="mr-3">
-        }
+        <div class="image-text">
+            @foreach (var item in build.BuildItems)
+            {
+                <img src="@item.ItemImageUrl" />
+                <p1>@item.ItemName</p1>
+            }
+        </div>
+        <div class="myCreatorName">
+            <p4>Creator: @build.User.UserName</p4>
+        </div>
         <hr>
     }
-
-    <a type="button" class="btn btn-outline-white btn-lg btn-block" asp-controller="Builds" asp-action="Create">Create Build +</a>
+    <a type="button" class="btn btn-outline-white btn-lg btn-block" asp-controller="Builds" asp-action="Create" asp-route-id="@this.Model.Id">Create Build +</a>
 </body>

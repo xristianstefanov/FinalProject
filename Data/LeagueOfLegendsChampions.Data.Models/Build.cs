@@ -11,7 +11,7 @@
         public Build()
         {
             this.Id = Guid.NewGuid().ToString();
-            this.Items = new HashSet<BuildItem>();
+            this.BuildItems = new HashSet<BuildItem>();
         }
 
         public string Name { get; set; }
@@ -20,7 +20,8 @@
 
         public virtual ApplicationUser User { get; set; }
 
-        public virtual ICollection<BuildItem> Items { get; set; }
+        public virtual ICollection<BuildItem> BuildItems { get; set; }
+        public virtual ICollection<Item> Items { get; set; }
         public string ChampionId { get; set; }
         public virtual Champion Champion { get; set; }
     }

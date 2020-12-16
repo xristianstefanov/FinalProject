@@ -187,6 +187,12 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<string>("ItemId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("ItemImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ItemName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BuildId");
@@ -248,6 +254,9 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.Property<string>("ApplicationUserId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("BuildId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
@@ -269,6 +278,8 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("BuildId");
 
                     b.HasIndex("IsDeleted");
 
@@ -550,7 +561,7 @@ namespace LeagueOfLegendsChampions.Data.Migrations
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.BuildItem", b =>
                 {
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Build", "Build")
-                        .WithMany("Items")
+                        .WithMany("BuildItems")
                         .HasForeignKey("BuildId");
 
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.Item", "Item")
@@ -570,6 +581,10 @@ namespace LeagueOfLegendsChampions.Data.Migrations
                     b.HasOne("LeagueOfLegendsChampions.Data.Models.ApplicationUser", null)
                         .WithMany("Items")
                         .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("LeagueOfLegendsChampions.Data.Models.Build", null)
+                        .WithMany("Items")
+                        .HasForeignKey("BuildId");
                 });
 
             modelBuilder.Entity("LeagueOfLegendsChampions.Data.Models.Rune", b =>

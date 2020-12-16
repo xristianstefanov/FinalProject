@@ -70,6 +70,7 @@
             services.AddTransient<ISkillsService, SkillsService>();
             services.AddTransient<ISkinsService, SkinsService>();
             services.AddTransient<IRunesService, RunesService>();
+            services.AddTransient<IItemsService, ItemsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,38 @@
+﻿hr {
+    border: none;
+    border-top: 3px ridge floralwhite;
+    color: floralwhite;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+h2 {
+    color: floralwhite;
+    text-align: center;
+}
+
+
+p4 {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-align: center;
+    color: floralwhite;
+}
+
+p1 {
+    text-align: center;
+    color: floralwhite;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+img {
+    border: solid;
+    border-color: floralwhite;
+    width: 50px;
+}
+
+.myCreatorName {
+    margin-top: 10px;
+}

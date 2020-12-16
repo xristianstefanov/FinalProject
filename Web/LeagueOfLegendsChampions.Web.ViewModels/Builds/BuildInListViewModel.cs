@@ -7,9 +7,11 @@
 
     public class BuildInListViewModel : IMapFrom<Build>
     {
-        public string Id { get; set; }
         public string Name { get; set; }
-        public IEnumerable<ItemInBuildViewModel> Items { get; set; }
-        public IEnumerable<string> SelectedItems { get; set; }
+
+        public ApplicationUser User { get; set; }
+        public IEnumerable<ItemInBuildViewModel> BuildItems { get; set; }
+        public IEnumerable<Item> Items { get; set; }
+        public List<string> SelectedItems { get; set; }
     }
 }
