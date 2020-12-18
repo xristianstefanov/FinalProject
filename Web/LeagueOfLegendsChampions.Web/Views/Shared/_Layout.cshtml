@@ -25,13 +25,16 @@
                     <ul class="navbar-nav flex-grow-1" style="position:absolute;right:145px">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>                        
+                        </li>
                     </ul>
-                    <ul class="navbar-nav flex-grow-1" style="position:absolute;right:415px">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Chat">Chat</a>
-                        </li>                        
-                    </ul>
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
+                        <ul class="navbar-nav flex-grow-1" style="position:absolute;right:415px">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Chat">Chat</a>
+                            </li>
+                        </ul>
+                    }
                 </div>
             </div>
         </nav>

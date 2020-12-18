@@ -18,22 +18,6 @@
             this.championsService = championsService;
         }
 
-        public IActionResult Add()
-        {
-            return this.View();
-        }
-
-        [HttpPost]
-        public IActionResult Add(AddChampionInputModel input)
-        {
-            if (!this.ModelState.IsValid)
-            {
-                return this.View();
-            }
-
-            return this.Redirect("/");
-        }
-
         public async Task<IActionResult> Import()
         {
             await this.championScraperService.ImportChampionsNamesAndIconsAsync();
