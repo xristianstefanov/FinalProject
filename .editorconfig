@@ -8,3 +8,12 @@ dotnet_diagnostic.SA1516.severity = none
 
 # SA1305: Field names should not use Hungarian notation
 dotnet_diagnostic.SA1305.severity = none
+
+# CS1998: Async method lacks 'await' operators and will run synchronously
+dotnet_diagnostic.CS1998.severity = none
+
+# xUnit2013: Do not use equality check to check for collection size.
+dotnet_diagnostic.xUnit2013.severity = none
+
+# SA1201: Elements should appear in the correct order
+dotnet_diagnostic.SA1201.severity = none

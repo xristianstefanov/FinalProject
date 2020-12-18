@@ -1,6 +1,7 @@
 ﻿namespace LeagueOfLegendsChampions.Web.ViewModels.Builds
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Linq;
     using AutoMapper;
     using LeagueOfLegendsChampions.Data.Models;
@@ -9,6 +10,8 @@
 
     public class BuildInListViewModel : IMapFrom<Build>
     {
+        [Required]
+        [MinLength(4)]
         public string Name { get; set; }
 
         public ApplicationUser User { get; set; }

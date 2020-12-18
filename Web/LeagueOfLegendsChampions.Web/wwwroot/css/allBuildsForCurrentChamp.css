@@ -21,10 +21,11 @@ p4 {
 }
 
 p1 {
-    text-align: center;
     color: floralwhite;
-    text-decoration: underline;
-    text-underline-position: under;
+    border: solid;
+    border-color: floralwhite;
+    padding: 2px;
+    margin-bottom: 20px;
 }
 
 img {

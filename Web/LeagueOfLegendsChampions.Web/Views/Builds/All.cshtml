@@ -4,7 +4,7 @@
 }
 
 <header>
-    <link rel="stylesheet" href="~/css/allBuildsForCurrentChamp.css">
+    <link rel="stylesheet" href="~/css/allBuildsCreatedForCurrChamp.css">
 </header>
 <body>
     <h2>@this.Model.ChampionName Builds:</h2>
@@ -12,6 +12,9 @@
     <hr>
     @foreach (var build in this.Model.Builds)
     {
+        <div class="myCurrentBuildName">
+            <p1>@build.Name</p1>
+        </div>
         <div class="image-text">
             @foreach (var item in build.BuildItems)
             {
