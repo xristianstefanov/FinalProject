@@ -1,0 +1,8 @@
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Services.deps.json
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Services.dll
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Services.pdb
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Services.csprojAssemblyReference.cache
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Services.AssemblyInfoInputs.cache
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Services.AssemblyInfo.cs
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Services.dll
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Services\LeagueOfLegendsChampions.Services\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Services.pdb

@@ -1,0 +1,11 @@
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.deps.json
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.dll
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.pdb
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Common.dll
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\bin\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Common.pdb
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.csprojAssemblyReference.cache
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.AssemblyInfoInputs.cache
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.AssemblyInfo.cs
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.csproj.CopyComplete
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.dll
+C:\Users\xrist\OneDrive\Desktop\MyFirstAspNetProject\Data\LeagueOfLegendsChampions.Data.Models\obj\Release\netstandard2.1\LeagueOfLegendsChampions.Data.Models.pdb

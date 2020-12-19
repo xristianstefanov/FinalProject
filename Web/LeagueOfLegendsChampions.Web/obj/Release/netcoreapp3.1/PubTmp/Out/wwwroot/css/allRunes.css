@@ -1,0 +1,45 @@
+﻿h1 {
+    color: floralwhite;
+    text-align: center;
+}
+
+p5 {
+    color: floralwhite;
+}
+
+p6 {
+    color: floralwhite;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.littleRune {
+    width: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 3px ridge floralwhite;
+    color: floralwhite;
+    overflow: visible;
+    text-align: center;
+}
+
+table {
+    color: floralwhite;
+    align-content: center;
+    align-self: center;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    table td {
+        padding: 17px
+    }
+
+.myR {
+    border: solid;
+    border-color: floralwhite;
+    text-align: center;
+}
