@@ -34,21 +34,24 @@
                 User = input.User,
             };
             int count = 0;
-            foreach (var item in input.SelectedItems)
+            for (int i = 0; i < 2; i++)
             {
                 if (!this.buildItemsRepository.AllAsNoTracking().Any(x => x.Id == $"{count}"))
                 {
-                    var selectedItemToBuild = new BuildItem
+                    foreach (var item in input.SelectedItems)
                     {
-                        Id = $"{count}",
-                        Build = buildToAdd,
-                        ItemId = this.itemsRepository.AllAsNoTracking().Where(i => i.Name == item).FirstOrDefault().Id,
-                        ItemName = this.itemsRepository.AllAsNoTracking().Where(i => i.Name == item).FirstOrDefault().Name,
-                        ItemImageUrl = this.itemsRepository.AllAsNoTracking().Where(i => i.Name == item).FirstOrDefault().ImageUrl,
-                    };
-                    buildToAdd.BuildItems.Add(selectedItemToBuild);
-                    await this.buildItemsRepository.AddAsync(selectedItemToBuild);
-                    count++;
+                        var selectedItemToBuild = new BuildItem
+                        {
+                            Id = $"{count}",
+                            Build = buildToAdd,
+                            ItemId = this.itemsRepository.AllAsNoTracking().Where(i => i.Name == item).FirstOrDefault().Id,
+                            ItemName = this.itemsRepository.AllAsNoTracking().Where(i => i.Name == item).FirstOrDefault().Name,
+                            ItemImageUrl = this.itemsRepository.AllAsNoTracking().Where(i => i.Name == item).FirstOrDefault().ImageUrl,
+                        };
+                        buildToAdd.BuildItems.Add(selectedItemToBuild);
+                        await this.buildItemsRepository.AddAsync(selectedItemToBuild);
+                        count++;
+                    }
                 }
                 else
                 {
