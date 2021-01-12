@@ -61,6 +61,14 @@
             return this.View(viewModel);
         }
 
+        public async Task<IActionResult> Delete(string id)
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            await this.buildsService.DeleteBuildAsync(id, user.Id.ToString());
+
+            return this.Redirect($"/Champions/ById/{id}");
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateAsync(BuildInListViewModel input, string id)
         {

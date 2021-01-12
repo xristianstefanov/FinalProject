@@ -9,5 +9,6 @@
     {
         IEnumerable<T> GetAll<T>(string id);
         Task CreateAsync(BuildInListViewModel input, string championId);
+        Task DeleteBuildAsync(string championId, string userId);
     }
 }

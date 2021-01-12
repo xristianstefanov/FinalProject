@@ -52,6 +52,8 @@
                         await this.buildItemsRepository.AddAsync(selectedItemToBuild);
                         count++;
                     }
+
+                    break;
                 }
                 else
                 {
@@ -62,6 +64,22 @@
             await this.buildsRepository.AddAsync(buildToAdd);
             await this.buildsRepository.SaveChangesAsync();
             await this.buildItemsRepository.SaveChangesAsync();
+        }
+
+        public async Task DeleteBuildAsync(string championId, string userId)
+        {
+            foreach (var build in this.buildsRepository.All().Where(x => x.ChampionId == championId && x.UserId == userId))
+            {
+                foreach (var buildItem in this.buildItemsRepository.All().Where(i => i.BuildId == build.Id))
+                {
+                    this.buildItemsRepository.Delete(buildItem);
+                }
+
+                this.buildsRepository.HardDelete(build);
+            }
+
+            await this.buildItemsRepository.SaveChangesAsync();
+            await this.buildsRepository.SaveChangesAsync();
         }
 
         public IEnumerable<T> GetAll<T>(string id)
